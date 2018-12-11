@@ -13,10 +13,7 @@ public class MusicManager : MonoBehaviour {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
             s.source.Play();
-            while (s.source.isPlaying)
-            {
-
-            }
+            
         }
 
 	}
