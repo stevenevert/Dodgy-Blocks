@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Goal : MonoBehaviour {
 
@@ -23,8 +25,10 @@ public class Goal : MonoBehaviour {
     {
         if (other.transform.CompareTag("Player"))
         {
-            gameWin.gameObject.SetActive(true);
+            //gameWin.gameObject.SetActive(true);
             Time.timeScale = 0;
+            SceneManager.LoadScene(1);
+
         }
     }
 
