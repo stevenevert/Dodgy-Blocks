@@ -24,7 +24,7 @@ public class Countdown : MonoBehaviour {
 	void Update () {
         if( timer >= 0.0f && canCount)
         {
-            timer -= Time.deltaTime;
+            timer += Time.deltaTime;
             uiText.text = timer.ToString("F"); // creating string into a float value
         }
         else if(timer <= 0.00)
@@ -33,7 +33,6 @@ public class Countdown : MonoBehaviour {
             doOnce = true;
             uiText.text = "0.00";
             timer = 0.00f;
-            gameOver.gameObject.SetActive(true);
             Time.timeScale = 0;
 
         }

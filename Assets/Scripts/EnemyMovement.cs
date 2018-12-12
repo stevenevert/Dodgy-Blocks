@@ -18,6 +18,12 @@ public class EnemyMovement : MonoBehaviour {
     private int xDirection;
     private int yDirection = 0;
     [SerializeField] Transform spawnPoint;
+    private deathControl deathMan;
+
+    void Awake()
+    {
+        deathMan = GameObject.FindObjectOfType<deathControl>();
+    }
     
     void Start () {
         originalPosition = this.transform.position;
@@ -36,7 +42,8 @@ public class EnemyMovement : MonoBehaviour {
         if (collision.transform.CompareTag("Player"))
         {
             collision.transform.position = spawnPoint.position;
-            gameControl.health -= 1;
+            deathMan.upDeaths();
+
         }
  
     }
