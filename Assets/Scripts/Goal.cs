@@ -23,6 +23,10 @@ public class Goal : MonoBehaviour {
     {
         if (other.transform.CompareTag("Player"))
         {
+            if (deathControl.deaths < gameControl.Lvl1Deaths)
+            {
+                gameControl.Lvl1Deaths = deathControl.deaths;
+            }
             gameWin.gameObject.SetActive(true);
             Time.timeScale = 0;
         }

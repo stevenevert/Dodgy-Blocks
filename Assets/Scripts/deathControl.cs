@@ -10,7 +10,7 @@ public class deathControl : MonoBehaviour {
     /// <summary>
     /// Creating a death counter and an object to be able to display such number
     /// </summary>
-    public int deaths;
+    public static int deaths;
     public Text deathText;
 
     /// <summary>
