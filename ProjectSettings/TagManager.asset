@@ -26,7 +26,7 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
+  - Characters
   - 
   - 
   - 
@@ -56,4 +56,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Characters
+    uniqueID: 2289241761
     locked: 0

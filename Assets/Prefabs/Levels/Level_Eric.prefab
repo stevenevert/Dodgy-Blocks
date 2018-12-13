@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 61210874771808558}
   - component: {fileID: 61946554157911542}
   m_Layer: 0
-  m_Name: Level_1
+  m_Name: Level_Eric
   m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
