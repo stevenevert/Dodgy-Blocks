@@ -34,6 +34,10 @@ public class gameControl : MonoBehaviour
     // Use this for initialization
     void Start()
         {
+        if(!File.Exists(Application.persistentDataPath + "/deaths.dat"))
+        {
+            Save();
+        }
        uiText.text = Lvl1Deaths.ToString();
         TimeText.text = Lvl1Time.ToString("F");
         health = 3;
