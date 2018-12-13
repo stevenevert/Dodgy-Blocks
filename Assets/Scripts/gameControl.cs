@@ -10,14 +10,16 @@ using UnityEngine.UI;
 public class gameControl : MonoBehaviour
     {
         [SerializeField] private Text uiText;
-        public GameObject heart1, heart2, heart3, gameOver;
+    [SerializeField] private Text TimeText;
+    public GameObject heart1, heart2, heart3, gameOver;
         public static int health;
-        public static int Lvl1Deaths;
-        public int Lvl2Deaths;
-        public int Lvl3Deaths;
-        public int Lvl4Deaths;
-        public int Lvl5Deaths;
-        public int totalDeaths;
+        public static int Lvl1Deaths = 999;
+        public int Lvl2Deaths = 999;
+        public int Lvl3Deaths = 999;
+        public int Lvl4Deaths = 999;
+        public int Lvl5Deaths = 999;
+        public int totalDeaths = 999;
+    public static float Lvl1Time = 999.99f;
 
     void OnEnable()
     {
@@ -33,6 +35,7 @@ public class gameControl : MonoBehaviour
     void Start()
         {
        uiText.text = Lvl1Deaths.ToString();
+        TimeText.text = Lvl1Time.ToString("F");
         health = 3;
             heart1.gameObject.SetActive(true);
             heart2.gameObject.SetActive(true);
@@ -99,6 +102,7 @@ public class gameControl : MonoBehaviour
         data.Lvl4Deaths = Lvl4Deaths;
         data.Lvl5Deaths = Lvl5Deaths;
         data.totalDeaths = totalDeaths;
+        data.Lvl1Time = Lvl1Time;
 
         bf.Serialize(file, data);
         file.Close();
@@ -118,6 +122,7 @@ public class gameControl : MonoBehaviour
             Lvl4Deaths = data.Lvl4Deaths;
             Lvl5Deaths = data.Lvl5Deaths;
             totalDeaths = data.totalDeaths;
+            Lvl1Time = data.Lvl1Time;
 
         }
             }
@@ -133,4 +138,5 @@ class DeathData
     public int Lvl4Deaths;
     public int Lvl5Deaths;
     public int totalDeaths;
+    public float Lvl1Time;
 }

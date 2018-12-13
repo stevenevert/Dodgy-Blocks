@@ -27,6 +27,10 @@ public class Goal : MonoBehaviour {
             {
                 gameControl.Lvl1Deaths = deathControl.deaths;
             }
+           if (Countdown.timer < gameControl.Lvl1Time)
+           {
+                gameControl.Lvl1Time = Countdown.timer;
+           }
             gameWin.gameObject.SetActive(true);
             Time.timeScale = 0;
         }

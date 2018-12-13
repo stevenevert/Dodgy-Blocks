@@ -9,7 +9,7 @@ public class Countdown : MonoBehaviour {
     [SerializeField] private float mainTimer;
     public GameObject gameOver;
 
-    private float timer;
+    public static float timer;
     private bool canCount = true;
     private bool doOnce = false;
 
