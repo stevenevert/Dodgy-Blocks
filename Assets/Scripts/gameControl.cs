@@ -14,13 +14,17 @@ public class gameControl : MonoBehaviour
     public GameObject heart1, heart2, heart3, gameOver;
         public static int health;
         public static int Lvl1Deaths = 999;
-        public int Lvl2Deaths = 999;
-        public int Lvl3Deaths = 999;
-        public int Lvl4Deaths = 999;
-        public int Lvl5Deaths = 999;
-        public int totalDeaths = 999;
+        public static int Lvl2Deaths = 999;
+        public static int Lvl3Deaths = 999;
+        public static int Lvl4Deaths = 999;
+        public static int Lvl5Deaths = 999;
+        public static int totalDeaths = 999;
     public static float Lvl1Time = 999.99f;
     public static float Lvl2Time = 999.99f;
+    public static float Lvl3Time = 999.99f;
+    public static float Lvl4Time = 999.99f;
+    public static float Lvl5Time = 999.99f;
+
 
     void OnEnable()
     {
@@ -50,6 +54,18 @@ public class gameControl : MonoBehaviour
             case "Level_Steven":
                 uiText.text = Lvl2Deaths.ToString();
                 TimeText.text = Lvl2Time.ToString("F");
+                break;
+            case "Level_Dominick":
+                uiText.text = Lvl3Deaths.ToString();
+                TimeText.text = Lvl3Time.ToString("F");
+                break;
+            case "Level_Matthew":
+                uiText.text = Lvl4Deaths.ToString();
+                TimeText.text = Lvl4Time.ToString("F");
+                break;
+            case "Level_Kian":
+                uiText.text = Lvl5Deaths.ToString();
+                TimeText.text = Lvl5Time.ToString("F");
                 break;
             default: break;
         }
@@ -123,6 +139,9 @@ public class gameControl : MonoBehaviour
         data.totalDeaths = totalDeaths;
         data.Lvl1Time = Lvl1Time;
         data.Lvl2Time = Lvl2Time;
+        data.Lvl3Time = Lvl3Time;
+        data.Lvl4Time = Lvl4Time;
+        data.Lvl5Time = Lvl5Time;
 
         bf.Serialize(file, data);
         file.Close();
@@ -144,6 +163,9 @@ public class gameControl : MonoBehaviour
             totalDeaths = data.totalDeaths;
             Lvl1Time = data.Lvl1Time;
             Lvl2Time = data.Lvl2Time;
+            Lvl3Time = data.Lvl3Time;
+            Lvl4Time = data.Lvl4Time;
+            Lvl5Time = data.Lvl5Time;
 
         }
             }
@@ -161,4 +183,7 @@ class DeathData
     public int totalDeaths;
     public float Lvl1Time;
     public float Lvl2Time;
+    public float Lvl3Time;
+    public float Lvl4Time;
+    public float Lvl5Time;
 }
