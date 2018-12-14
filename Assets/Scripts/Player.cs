@@ -9,12 +9,18 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveVelocity;
 
+    /// <summary>
+    /// 
+    /// </summary>
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
 
+    /// <summary>
+    /// Updating the movement of the player
+    /// </summary>
     void Update()
     {
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));

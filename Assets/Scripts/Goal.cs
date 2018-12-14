@@ -6,19 +6,15 @@ public class Goal : MonoBehaviour {
 
     public GameObject gameWin;
 
-    // Use this for initialization
+    /// <summary>
+    /// Initializing the object that is to be touched to win in a level
+    /// </summary>
     void Start () {
         gameWin.gameObject.SetActive(false);
     }
 	
-	// Update is called once per frame
-	void Update () {
 
-
-		
-	}
-
-
+    
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.transform.CompareTag("Player"))

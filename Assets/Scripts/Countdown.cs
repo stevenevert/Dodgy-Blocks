@@ -14,13 +14,16 @@ public class Countdown : MonoBehaviour {
     private bool doOnce = false;
 
 
-	// Use this for initialization
+	/// <summary>
+    /// Initializing the timer
+    /// </summary>
 	void Start () {
         timer = mainTimer;
-		
 	}
 	
-	// Update is called once per frame
+	/// <summary>
+    /// Defining the timer so that it starts counting up with a floating type value
+    /// </summary>
 	void Update () {
         if( timer >= 0.0f && canCount)
         {
