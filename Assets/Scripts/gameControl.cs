@@ -20,6 +20,7 @@ public class gameControl : MonoBehaviour
         public int Lvl5Deaths = 999;
         public int totalDeaths = 999;
     public static float Lvl1Time = 999.99f;
+    public static float Lvl2Time = 999.99f;
 
     void OnEnable()
     {
@@ -34,12 +35,26 @@ public class gameControl : MonoBehaviour
     // Use this for initialization
     void Start()
         {
+        Scene currentScene = SceneManager.GetActiveScene();
+        string currentName = currentScene.name;
         if(!File.Exists(Application.persistentDataPath + "/deaths.dat"))
         {
             Save();
         }
-       uiText.text = Lvl1Deaths.ToString();
-        TimeText.text = Lvl1Time.ToString("F");
+        switch (currentName)
+        {
+            case "Level_Eric":
+                uiText.text = Lvl1Deaths.ToString();
+                TimeText.text = Lvl1Time.ToString("F");
+                break;
+            case "Level_Steven":
+                uiText.text = Lvl2Deaths.ToString();
+                TimeText.text = Lvl2Time.ToString("F");
+                break;
+            default: break;
+        }
+        //uiText.text = Lvl1Deaths.ToString();
+       // TimeText.text = Lvl1Time.ToString("F");
         health = 3;
             heart1.gameObject.SetActive(true);
             heart2.gameObject.SetActive(true);
@@ -107,6 +122,7 @@ public class gameControl : MonoBehaviour
         data.Lvl5Deaths = Lvl5Deaths;
         data.totalDeaths = totalDeaths;
         data.Lvl1Time = Lvl1Time;
+        data.Lvl2Time = Lvl2Time;
 
         bf.Serialize(file, data);
         file.Close();
@@ -127,6 +143,7 @@ public class gameControl : MonoBehaviour
             Lvl5Deaths = data.Lvl5Deaths;
             totalDeaths = data.totalDeaths;
             Lvl1Time = data.Lvl1Time;
+            Lvl2Time = data.Lvl2Time;
 
         }
             }
@@ -143,4 +160,5 @@ class DeathData
     public int Lvl5Deaths;
     public int totalDeaths;
     public float Lvl1Time;
+    public float Lvl2Time;
 }
