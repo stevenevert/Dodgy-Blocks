@@ -63,53 +63,53 @@ public class gameControl : MonoBehaviour
                 uiText.text = Lvl4Deaths.ToString();
                 TimeText.text = Lvl4Time.ToString("F");
                 break;
-            case "Level_Kian":
+            case "Level_Kian1":
                 uiText.text = Lvl5Deaths.ToString();
                 TimeText.text = Lvl5Time.ToString("F");
                 break;
             default: break;
         }
         //uiText.text = Lvl1Deaths.ToString();
-       // TimeText.text = Lvl1Time.ToString("F");
-        health = 3;
-            heart1.gameObject.SetActive(true);
-            heart2.gameObject.SetActive(true);
-            heart3.gameObject.SetActive(true);
-            gameOver.gameObject.SetActive(false);
+        //TimeText.text = Lvl1Time.ToString("F");
+        //health = 3;
+        //    heart1.gameObject.SetActive(true);
+        //    heart2.gameObject.SetActive(true);
+        //    heart3.gameObject.SetActive(true);
+        //    gameOver.gameObject.SetActive(false);
         }
 
         // Update is called once per frame
         void Update()
         {
 
-        if (health > 3)
-                health = 3;
+        //if (health > 3)
+        //        health = 3;
 
-            switch (health)
-            {
-                case 3:
-                    heart1.gameObject.SetActive(true);
-                    heart2.gameObject.SetActive(true);
-                    heart3.gameObject.SetActive(true);
-                    break;
-                case 2:
-                    heart1.gameObject.SetActive(true);
-                    heart2.gameObject.SetActive(true);
-                    heart3.gameObject.SetActive(false);
-                    break;
-                case 1:
-                    heart1.gameObject.SetActive(true);
-                    heart2.gameObject.SetActive(false);
-                    heart3.gameObject.SetActive(false);
-                    break;
-                case 0:
-                    heart1.gameObject.SetActive(false);
-                    heart1.gameObject.SetActive(false);
-                    heart1.gameObject.SetActive(false);
-                    gameOver.gameObject.SetActive(true);
-                    Time.timeScale = 0;
-                    break;
-            }
+        //    switch (health)
+        //    {
+        //        case 3:
+        //            heart1.gameObject.SetActive(true);
+        //            heart2.gameObject.SetActive(true);
+        //            heart3.gameObject.SetActive(true);
+        //            break;
+        //        case 2:
+        //            heart1.gameObject.SetActive(true);
+        //            heart2.gameObject.SetActive(true);
+        //            heart3.gameObject.SetActive(false);
+        //            break;
+        //        case 1:
+        //            heart1.gameObject.SetActive(true);
+        //            heart2.gameObject.SetActive(false);
+        //            heart3.gameObject.SetActive(false);
+        //            break;
+        //        case 0:
+        //            heart1.gameObject.SetActive(false);
+        //            heart1.gameObject.SetActive(false);
+        //            heart1.gameObject.SetActive(false);
+        //            gameOver.gameObject.SetActive(true);
+        //            Time.timeScale = 0;
+        //            break;
+        //    }
             
     
         }

@@ -18,11 +18,11 @@ public class EnemyMovement : MonoBehaviour {
     private int xDirection;
     private int yDirection = 0;
     [SerializeField] Transform spawnPoint;
-    private deathControl deathMan;
+    private UIControl deathMan;
 
     void Awake()
     {
-        deathMan = GameObject.FindObjectOfType<deathControl>();
+        deathMan = GameObject.FindObjectOfType<UIControl>();
     }
     
     void Start () {
