@@ -38,6 +38,11 @@ public class Goal : MonoBehaviour {
                     {
                         gameControl.Lvl1Time = UIControl.timer;
                     }
+                    if (user.coins == 2)
+                    {
+                        gameWin.gameObject.SetActive(true);
+                        Time.timeScale = 0;
+                    }
                     break;
                 case "Level_Steven":
                     if (UIControl.deaths < gameControl.Lvl2Deaths)
@@ -47,6 +52,11 @@ public class Goal : MonoBehaviour {
                     if (UIControl.timer < gameControl.Lvl2Time)
                     {
                         gameControl.Lvl2Time = UIControl.timer;
+                    }
+                    if (user.coins == 0)
+                    {
+                        gameWin.gameObject.SetActive(true);
+                        Time.timeScale = 0;
                     }
                     break;
                 case "Level_Dominick":
@@ -58,6 +68,11 @@ public class Goal : MonoBehaviour {
                     {
                         gameControl.Lvl3Time = UIControl.timer;
                     }
+                    if (user.coins == 0)
+                    {
+                        gameWin.gameObject.SetActive(true);
+                        Time.timeScale = 0;
+                    }
                     break;
                 case "Level_Matthew":
                     if (UIControl.deaths < gameControl.Lvl4Deaths)
@@ -68,6 +83,11 @@ public class Goal : MonoBehaviour {
                     {
                         gameControl.Lvl4Time = UIControl.timer;
                     }
+                    if (user.coins == 0)
+                    {
+                        gameWin.gameObject.SetActive(true);
+                        Time.timeScale = 0;
+                    }
                     break;
                 case "Level_Kian1":
                     if (UIControl.deaths < gameControl.Lvl5Deaths)
@@ -77,6 +97,11 @@ public class Goal : MonoBehaviour {
                     if (UIControl.timer < gameControl.Lvl5Time)
                     {
                         gameControl.Lvl5Time = UIControl.timer;
+                    }
+                    if (user.coins == 0)
+                    {
+                        gameWin.gameObject.SetActive(true);
+                        Time.timeScale = 0;
                     }
                     break;
                 default: break;
@@ -90,17 +115,7 @@ public class Goal : MonoBehaviour {
                  gameControl.Lvl1Time = Countdown.timer;
             }*/
 
-            switch (currentName)
-            {
-                case "Level_Eric":
-                    if (user.coins == 2)
-                    {
-                        gameWin.gameObject.SetActive(true);
-                        Time.timeScale = 0;
-                    }
-                    break;
-                default: break;
-            }
+         
 
             
         }
