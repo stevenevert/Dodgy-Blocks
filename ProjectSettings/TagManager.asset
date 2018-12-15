@@ -18,6 +18,7 @@ TagManager:
   - Enemy_10
   - Enemy_11
   - coin
+  - Goal
   layers:
   - Default
   - TransparentFX

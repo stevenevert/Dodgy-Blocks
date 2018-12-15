@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyMovement : MonoBehaviour {
 
@@ -20,6 +21,9 @@ public class EnemyMovement : MonoBehaviour {
     [SerializeField] Transform spawnPoint;
     private UIControl deathMan;
 
+    /// <summary>
+    /// Initializing UI element for game deaths
+    /// </summary>
     void Awake()
     {
         deathMan = GameObject.FindObjectOfType<UIControl>();
@@ -37,13 +41,29 @@ public class EnemyMovement : MonoBehaviour {
             xController = true;
     }
 
+    /// <summary>
+    /// Defining method that will count deaths, respawn and reset the scene accordingly
+    /// </summary>
+    /// <param name="collision"></param>
     void OnCollisionEnter2D(Collision2D collision)
     {
+        // Obtaining scene info
+        Scene currentScene = SceneManager.GetActiveScene();
+        string currentName = currentScene.name;
+
         if (collision.transform.CompareTag("Player"))
         {
             collision.transform.position = spawnPoint.position;
             deathMan.upDeaths();
 
+            // Resetting the scene in certain levels depending if the "goal" area is the same as the original spawn point
+            switch (currentName)
+            {
+                case "Level_Eric2":
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                    break;
+                default: break;
+            }
         }
  
     }
