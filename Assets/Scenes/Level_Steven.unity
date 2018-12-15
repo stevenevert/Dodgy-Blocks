@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1811,6 +1811,7 @@ GameObject:
   - component: {fileID: 1963732995}
   - component: {fileID: 1963732994}
   - component: {fileID: 1963732993}
+  - component: {fileID: 1963732997}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1901,6 +1902,23 @@ RectTransform:
   m_AnchoredPosition: {x: -16.63, y: 2.18}
   m_SizeDelta: {x: 71.41, y: 59.13}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1963732997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1963732992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fab3a67f2533b5c4283de4d45614346e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiTextDeath: {fileID: 815381079}
+  mainDeaths: 0
+  uiTextTime: {fileID: 2057718364}
+  mainTimer: 0
+  gameOver: {fileID: 0}
+  deathText: {fileID: 0}
 --- !u!1 &2028600843
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,53 +27,53 @@ public class Goal : MonoBehaviour {
             switch (currentName)
             {
                 case "Level_Eric":
-                    if (deathControl.deaths < gameControl.Lvl1Deaths)
+                    if (UIControl.deaths < gameControl.Lvl1Deaths)
                     {
-                        gameControl.Lvl1Deaths = deathControl.deaths;
+                        gameControl.Lvl1Deaths = UIControl.deaths;
                     }
-                    if (Countdown.timer < gameControl.Lvl1Time)
+                    if (UIControl.timer < gameControl.Lvl1Time)
                     {
-                        gameControl.Lvl1Time = Countdown.timer;
+                        gameControl.Lvl1Time = UIControl.timer;
                     }
                     break;
                 case "Level_Steven":
-                    if (deathControl.deaths < gameControl.Lvl2Deaths)
+                    if (UIControl.deaths < gameControl.Lvl2Deaths)
                     {
-                        gameControl.Lvl2Deaths = deathControl.deaths;
+                        gameControl.Lvl2Deaths = UIControl.deaths;
                     }
-                    if (Countdown.timer < gameControl.Lvl2Time)
+                    if (UIControl.timer < gameControl.Lvl2Time)
                     {
-                        gameControl.Lvl2Time = Countdown.timer;
+                        gameControl.Lvl2Time = UIControl.timer;
                     }
                     break;
                 case "Level_Dominick":
-                    if (deathControl.deaths < gameControl.Lvl3Deaths)
+                    if (UIControl.deaths < gameControl.Lvl3Deaths)
                     {
-                        gameControl.Lvl3Deaths = deathControl.deaths;
+                        gameControl.Lvl3Deaths = UIControl.deaths;
                     }
-                    if (Countdown.timer < gameControl.Lvl3Time)
+                    if (UIControl.timer < gameControl.Lvl3Time)
                     {
-                        gameControl.Lvl3Time = Countdown.timer;
+                        gameControl.Lvl3Time = UIControl.timer;
                     }
                     break;
                 case "Level_Matthew":
-                    if (deathControl.deaths < gameControl.Lvl4Deaths)
+                    if (UIControl.deaths < gameControl.Lvl4Deaths)
                     {
-                        gameControl.Lvl4Deaths = deathControl.deaths;
+                        gameControl.Lvl4Deaths = UIControl.deaths;
                     }
-                    if (Countdown.timer < gameControl.Lvl4Time)
+                    if (UIControl.timer < gameControl.Lvl4Time)
                     {
-                        gameControl.Lvl4Time = Countdown.timer;
+                        gameControl.Lvl4Time = UIControl.timer;
                     }
                     break;
-                case "Level_Kian":
-                    if (deathControl.deaths < gameControl.Lvl5Deaths)
+                case "Level_Kian1":
+                    if (UIControl.deaths < gameControl.Lvl5Deaths)
                     {
-                        gameControl.Lvl5Deaths = deathControl.deaths;
+                        gameControl.Lvl5Deaths = UIControl.deaths;
                     }
-                    if (Countdown.timer < gameControl.Lvl5Time)
+                    if (UIControl.timer < gameControl.Lvl5Time)
                     {
-                        gameControl.Lvl5Time = Countdown.timer;
+                        gameControl.Lvl5Time = UIControl.timer;
                     }
                     break;
                 default: break;

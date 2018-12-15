@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -151,11 +151,6 @@ MonoBehaviour:
   heart2: {fileID: 0}
   heart3: {fileID: 0}
   gameOver: {fileID: 0}
-  Lvl2Deaths: 0
-  Lvl3Deaths: 0
-  Lvl4Deaths: 0
-  Lvl5Deaths: 0
-  totalDeaths: 0
 --- !u!4 &148684103
 Transform:
   m_ObjectHideFlags: 0
@@ -1154,6 +1149,7 @@ GameObject:
   - component: {fileID: 670743182}
   - component: {fileID: 670743181}
   - component: {fileID: 670743180}
+  - component: {fileID: 670743183}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1244,6 +1240,23 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &670743183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 670743178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fab3a67f2533b5c4283de4d45614346e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiTextDeath: {fileID: 456059085}
+  mainDeaths: 0
+  uiTextTime: {fileID: 406211489}
+  mainTimer: 0
+  gameOver: {fileID: 0}
+  deathText: {fileID: 0}
 --- !u!1 &809188414
 GameObject:
   m_ObjectHideFlags: 0
