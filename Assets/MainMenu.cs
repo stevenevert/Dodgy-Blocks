@@ -7,7 +7,9 @@ public class MainMenu : MonoBehaviour {
 
 	public void PlayGame ()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        int i = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //SceneManager.GetActiveScene().buildIndex + 1
+                                  //"Level_Eric"
     }
 
     public void Quit()

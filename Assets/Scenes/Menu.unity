@@ -925,13 +925,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b336086211639f43a02880efb8fc26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level1: Level_Eric
-  Level2: 
-  Level3: 
-  Level4: 
-  Level5: 
-  Level6: 
-  firstMenu: 
 --- !u!1 &526062884
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,7 +1071,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 494360429}
-        m_MethodName: level1
+        m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
