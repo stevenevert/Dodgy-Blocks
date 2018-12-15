@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Goal : MonoBehaviour {
 
     public GameObject gameWin;
+    // Creating an object from Player script
+    Player user;
 
     /// <summary>
     /// Initializing the object that is to be touched to win in a level
@@ -14,6 +16,7 @@ public class Goal : MonoBehaviour {
         gameWin.gameObject.SetActive(false);
         //Scene currentScene = SceneManager.GetActiveScene();
         //string currentName = currentScene.name;
+        user = GameObject.Find("Player").GetComponent<Player>();
     }
 	
 
@@ -78,16 +81,28 @@ public class Goal : MonoBehaviour {
                     break;
                 default: break;
             }
-           /* if (deathControl.deaths < gameControl.Lvl1Deaths)
+            /* if (deathControl.deaths < gameControl.Lvl1Deaths)
+             {
+                 gameControl.Lvl1Deaths = deathControl.deaths;
+             }
+            if (Countdown.timer < gameControl.Lvl1Time)
             {
-                gameControl.Lvl1Deaths = deathControl.deaths;
+                 gameControl.Lvl1Time = Countdown.timer;
+            }*/
+
+            switch (currentName)
+            {
+                case "Level_Eric":
+                    if (user.coins == 2)
+                    {
+                        gameWin.gameObject.SetActive(true);
+                        Time.timeScale = 0;
+                    }
+                    break;
+                default: break;
             }
-           if (Countdown.timer < gameControl.Lvl1Time)
-           {
-                gameControl.Lvl1Time = Countdown.timer;
-           }*/
-            gameWin.gameObject.SetActive(true);
-            Time.timeScale = 0;
+
+            
         }
     }
 

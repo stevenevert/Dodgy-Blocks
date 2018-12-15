@@ -17,6 +17,7 @@ TagManager:
   - Enemy_9
   - Enemy_10
   - Enemy_11
+  - coin
   layers:
   - Default
   - TransparentFX
