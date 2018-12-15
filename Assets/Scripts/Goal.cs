@@ -29,7 +29,7 @@ public class Goal : MonoBehaviour {
         {
             switch (currentName)
             {
-                case "Level_Eric":
+                case "Level_Eric1":
                     if (UIControl.deaths < gameControl.Lvl1Deaths)
                     {
                         gameControl.Lvl1Deaths = UIControl.deaths;
@@ -39,6 +39,21 @@ public class Goal : MonoBehaviour {
                         gameControl.Lvl1Time = UIControl.timer;
                     }
                     if (user.coins == 2)
+                    {
+                        gameWin.gameObject.SetActive(true);
+                        Time.timeScale = 0;
+                    }
+                    break;
+                case "Level_Eric2":
+                    if (UIControl.deaths < gameControl.Lvl1Deaths)
+                    {
+                        gameControl.Lvl1Deaths = UIControl.deaths;
+                    }
+                    if (UIControl.timer < gameControl.Lvl1Time)
+                    {
+                        gameControl.Lvl1Time = UIControl.timer;
+                    }
+                    if (user.coins == 24)
                     {
                         gameWin.gameObject.SetActive(true);
                         Time.timeScale = 0;
