@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Goal : MonoBehaviour {
 
+    // Creating object to activate label in Unity
     public GameObject gameWin;
     // Creating an object from Player script
     Player user;
@@ -122,6 +123,11 @@ public class Goal : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Method supporting levels in which the goal is at the same location where the spawn
+    /// point is at.
+    /// </summary>
+    /// <param name="other"></param>
     void OnTriggerEnter2D(Collider2D other)
     {
         Scene currentScene = SceneManager.GetActiveScene();
@@ -139,15 +145,13 @@ public class Goal : MonoBehaviour {
                     {
                         gameControl.Lvl1Time = UIControl.timer;
                     }
-                    if (user.coins == 0)
+                    if (user.coins == 24)
                     {
-                        if (other.tag == "Goal")
-                        {
-                            gameWin.gameObject.SetActive(true);
-                            Time.timeScale = 0;
-                        }
+                        gameWin.gameObject.SetActive(true);
+                        Time.timeScale = 0;
                     }
                     break;
+                default: break;
             }
         }
     }
