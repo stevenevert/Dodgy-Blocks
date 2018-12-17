@@ -12,18 +12,20 @@ public class gameControl : MonoBehaviour
         [SerializeField] private Text uiText;
     [SerializeField] private Text TimeText;
     public GameObject heart1, heart2, heart3, gameOver;
-        public static int health;
-        public static int Lvl1Deaths = 999;
-        public static int Lvl2Deaths = 999;
-        public static int Lvl3Deaths = 999;
-        public static int Lvl4Deaths = 999;
-        public static int Lvl5Deaths = 999;
-        public static int totalDeaths = 999;
-    public static float Lvl1Time = 999.99f;
+    public static int health;
+     /*public static int Lvl1Deaths = 999;
+     public static int Lvl2Deaths = 999;
+     public static int Lvl3Deaths = 999;
+     public static int Lvl4Deaths = 999;
+     public static int Lvl5Deaths = 999;
+     public static int totalDeaths = 999;*/
+    public static int[] deaths = new int[9] {9999,9999,9999,9999,9999,9999,9999,9999,9999};
+    /*public static float Lvl1Time = 999.99f;
     public static float Lvl2Time = 999.99f;
     public static float Lvl3Time = 999.99f;
     public static float Lvl4Time = 999.99f;
-    public static float Lvl5Time = 999.99f;
+    public static float Lvl5Time = 999.99f;*/
+    public static float[] bestTime = new float[9] { 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f };
 
 
     void OnEnable()
@@ -47,82 +49,57 @@ public class gameControl : MonoBehaviour
         }
         switch (currentName)
         {
-            case "Level_Eric":
-                uiText.text = Lvl1Deaths.ToString();
-                TimeText.text = Lvl1Time.ToString("F");
-                break;
             case "Level_Steven":
-                uiText.text = Lvl2Deaths.ToString();
-                TimeText.text = Lvl2Time.ToString("F");
+                uiText.text = deaths[1].ToString();
+                TimeText.text = bestTime[1].ToString("F");
                 break;
             case "Level_Dominick":
-                uiText.text = Lvl3Deaths.ToString();
-                TimeText.text = Lvl3Time.ToString("F");
+                uiText.text = deaths[2].ToString();
+                TimeText.text = bestTime[2].ToString("F");
                 break;
-            case "Level_Matthew":
-                uiText.text = Lvl4Deaths.ToString();
-                TimeText.text = Lvl4Time.ToString("F");
+            case "Level_Eric1":
+                uiText.text = deaths[3].ToString();
+                TimeText.text = bestTime[3].ToString("F");
                 break;
             case "Level_Kian1":
-                uiText.text = Lvl5Deaths.ToString();
-                TimeText.text = Lvl5Time.ToString("F");
+                uiText.text = deaths[4].ToString();
+                TimeText.text = bestTime[4].ToString("F");
                 break;
+            case "Level_Matthew":
+                uiText.text = deaths[5].ToString();
+                TimeText.text = bestTime[5].ToString("F");
+                break;
+            case "Level_Kian2":
+                uiText.text = deaths[6].ToString();
+                TimeText.text = bestTime[6].ToString("F");
+                break;
+            case "Level_Kian3":
+                uiText.text = deaths[7].ToString();
+                TimeText.text = bestTime[7].ToString("F");
+                break;
+            case "Level_Kian4":
+                uiText.text = deaths[8].ToString();
+                TimeText.text = bestTime[8].ToString("F");
+                break;
+            case "Level_Eric2":
+                uiText.text = deaths[9].ToString();
+                TimeText.text = bestTime[9].ToString("F");
+                break;
+
             default: break;
         }
-        //uiText.text = Lvl1Deaths.ToString();
-        //TimeText.text = Lvl1Time.ToString("F");
-        //health = 3;
-        //    heart1.gameObject.SetActive(true);
-        //    heart2.gameObject.SetActive(true);
-        //    heart3.gameObject.SetActive(true);
-        //    gameOver.gameObject.SetActive(false);
-        }
+               }
 
         // Update is called once per frame
         void Update()
         {
 
-        //if (health > 3)
-        //        health = 3;
-
-        //    switch (health)
-        //    {
-        //        case 3:
-        //            heart1.gameObject.SetActive(true);
-        //            heart2.gameObject.SetActive(true);
-        //            heart3.gameObject.SetActive(true);
-        //            break;
-        //        case 2:
-        //            heart1.gameObject.SetActive(true);
-        //            heart2.gameObject.SetActive(true);
-        //            heart3.gameObject.SetActive(false);
-        //            break;
-        //        case 1:
-        //            heart1.gameObject.SetActive(true);
-        //            heart2.gameObject.SetActive(false);
-        //            heart3.gameObject.SetActive(false);
-        //            break;
-        //        case 0:
-        //            heart1.gameObject.SetActive(false);
-        //            heart1.gameObject.SetActive(false);
-        //            heart1.gameObject.SetActive(false);
-        //            gameOver.gameObject.SetActive(true);
-        //            Time.timeScale = 0;
-        //            break;
-        //    }
-            
-    
+       
         }
 
     public void Reset(int num)
     {
-        Lvl1Deaths = num;
-        Lvl2Deaths = num;
-        Lvl3Deaths = num;
-        Lvl4Deaths = num;
-        Lvl5Deaths = num;
-        totalDeaths = num;
-        uiText.text = Lvl1Deaths.ToString();
+       
     }
         
             public void Save()
@@ -131,7 +108,7 @@ public class gameControl : MonoBehaviour
         FileStream file = File.Create(Application.persistentDataPath + "/deaths.dat");
 
         DeathData data = new DeathData();
-        data.Lvl1Deaths = Lvl1Deaths;
+        /*data.Lvl1Deaths = Lvl1Deaths;
         data.Lvl2Deaths = Lvl2Deaths;
         data.Lvl3Deaths = Lvl3Deaths;
         data.Lvl4Deaths = Lvl4Deaths;
@@ -141,7 +118,9 @@ public class gameControl : MonoBehaviour
         data.Lvl2Time = Lvl2Time;
         data.Lvl3Time = Lvl3Time;
         data.Lvl4Time = Lvl4Time;
-        data.Lvl5Time = Lvl5Time;
+        data.Lvl5Time = Lvl5Time;*/
+        data.deaths = deaths;
+        data.bestTime = bestTime;
 
         bf.Serialize(file, data);
         file.Close();
@@ -154,8 +133,9 @@ public class gameControl : MonoBehaviour
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(Application.persistentDataPath + "/deaths.dat", FileMode.Open);
             DeathData data = (DeathData)bf.Deserialize(file);
-
-            Lvl1Deaths = data.Lvl1Deaths;
+            deaths = data.deaths;
+            bestTime = data.bestTime;
+            /*Lvl1Deaths = data.Lvl1Deaths;
             Lvl2Deaths = data.Lvl2Deaths;
             Lvl3Deaths = data.Lvl3Deaths;
             Lvl4Deaths = data.Lvl4Deaths;
@@ -165,7 +145,7 @@ public class gameControl : MonoBehaviour
             Lvl2Time = data.Lvl2Time;
             Lvl3Time = data.Lvl3Time;
             Lvl4Time = data.Lvl4Time;
-            Lvl5Time = data.Lvl5Time;
+            Lvl5Time = data.Lvl5Time;*/
 
         }
             }
@@ -175,7 +155,10 @@ public class gameControl : MonoBehaviour
 [Serializable]
 class DeathData
 {
-    public int Lvl1Deaths;
+    public int[] deaths = new int[9];
+    public float[] bestTime = new float[9];
+
+    /*public int Lvl1Deaths;
     public int Lvl2Deaths;
     public int Lvl3Deaths;
     public int Lvl4Deaths;
@@ -185,5 +168,6 @@ class DeathData
     public float Lvl2Time;
     public float Lvl3Time;
     public float Lvl4Time;
-    public float Lvl5Time;
+    public float Lvl5Time;*/
+
 }

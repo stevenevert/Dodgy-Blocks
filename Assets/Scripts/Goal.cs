@@ -30,78 +30,138 @@ public class Goal : MonoBehaviour {
         {
             switch (currentName)
             {
-                case "Level_Eric1":
-                    if (UIControl.deaths < gameControl.Lvl1Deaths)
-                    {
-                        gameControl.Lvl1Deaths = UIControl.deaths;
-                    }
-                    if (UIControl.timer < gameControl.Lvl1Time)
-                    {
-                        gameControl.Lvl1Time = UIControl.timer;
-                    }
+                case "Level_Steven":
                     if (user.coins == 3)
                     {
+                        if (UIControl.deaths < gameControl.deaths[1])
+                        {
+                            gameControl.deaths[1] = UIControl.deaths;
+                        }
+                        if (UIControl.timer < gameControl.bestTime[1])
+                        {
+                            gameControl.bestTime[1] = UIControl.timer;
+                        }
                         gameWin.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
                     break;
-                
-                case "Level_Steven":
-                    if (UIControl.deaths < gameControl.Lvl2Deaths)
-                    {
-                        gameControl.Lvl2Deaths = UIControl.deaths;
-                    }
-                    if (UIControl.timer < gameControl.Lvl2Time)
-                    {
-                        gameControl.Lvl2Time = UIControl.timer;
-                    }
-                    if (user.coins == 0)
-                    {
-                        gameWin.gameObject.SetActive(true);
-                        Time.timeScale = 0;
-                    }
-                    break;
+
                 case "Level_Dominick":
-                    if (UIControl.deaths < gameControl.Lvl3Deaths)
-                    {
-                        gameControl.Lvl3Deaths = UIControl.deaths;
-                    }
-                    if (UIControl.timer < gameControl.Lvl3Time)
-                    {
-                        gameControl.Lvl3Time = UIControl.timer;
-                    }
                     if (user.coins == 0)
                     {
+                        if (UIControl.deaths < gameControl.deaths[2])
+                        {
+                            gameControl.deaths[2] = UIControl.deaths;
+                        }
+                        if (UIControl.timer < gameControl.bestTime[2])
+                        {
+                            gameControl.bestTime[2] = UIControl.timer;
+                        }
                         gameWin.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
                     break;
-                case "Level_Matthew":
-                    if (UIControl.deaths < gameControl.Lvl4Deaths)
-                    {
-                        gameControl.Lvl4Deaths = UIControl.deaths;
-                    }
-                    if (UIControl.timer < gameControl.Lvl4Time)
-                    {
-                        gameControl.Lvl4Time = UIControl.timer;
-                    }
+                case "Level_Eric1":
                     if (user.coins == 0)
                     {
+                        if (UIControl.deaths < gameControl.deaths[3])
+                        {
+                            gameControl.deaths[3] = UIControl.deaths;
+                        }
+                        if (UIControl.timer < gameControl.bestTime[3])
+                        {
+                            gameControl.bestTime[3] = UIControl.timer;
+                        }
                         gameWin.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
                     break;
                 case "Level_Kian1":
-                    if (UIControl.deaths < gameControl.Lvl5Deaths)
-                    {
-                        gameControl.Lvl5Deaths = UIControl.deaths;
-                    }
-                    if (UIControl.timer < gameControl.Lvl5Time)
-                    {
-                        gameControl.Lvl5Time = UIControl.timer;
-                    }
                     if (user.coins == 0)
                     {
+                        if (UIControl.deaths < gameControl.deaths[4])
+                        {
+                            gameControl.deaths[4] = UIControl.deaths;
+                        }
+                        if (UIControl.timer < gameControl.bestTime[4])
+                        {
+                            gameControl.bestTime[4] = UIControl.timer;
+                        }
+                        gameWin.gameObject.SetActive(true);
+                        Time.timeScale = 0;
+                    }
+                    break;
+                case "Level_Matthew":
+                    if (user.coins == 0)
+                    {
+                        if (UIControl.deaths < gameControl.deaths[5])
+                        {
+                            gameControl.deaths[5] = UIControl.deaths;
+                        }
+                        if (UIControl.timer < gameControl.bestTime[5])
+                        {
+                            gameControl.bestTime[5] = UIControl.timer;
+                        }
+                        gameWin.gameObject.SetActive(true);
+                        Time.timeScale = 0;
+                    }
+                    break;
+                case "Level_Kian2":
+                    if (user.coins == 0)
+                    {
+                        if (UIControl.deaths < gameControl.deaths[6])
+                        {
+                            gameControl.deaths[6] = UIControl.deaths;
+                        }
+                        if (UIControl.timer < gameControl.bestTime[6])
+                        {
+                            gameControl.bestTime[6] = UIControl.timer;
+                        }
+                        gameWin.gameObject.SetActive(true);
+                        Time.timeScale = 0;
+                    }
+                    break;
+                case "Level_Kian3":
+                    if (user.coins == 0)
+                    {
+                        if (UIControl.deaths < gameControl.deaths[7])
+                        {
+                            gameControl.deaths[7] = UIControl.deaths;
+                        }
+                        if (UIControl.timer < gameControl.bestTime[7])
+                        {
+                            gameControl.bestTime[7] = UIControl.timer;
+                        }
+                        gameWin.gameObject.SetActive(true);
+                        Time.timeScale = 0;
+                    }
+                    break;
+                case "Level_Kian4":
+                    if (user.coins == 0)
+                    {
+                        if (UIControl.deaths < gameControl.deaths[8])
+                        {
+                            gameControl.deaths[8] = UIControl.deaths;
+                        }
+                        if (UIControl.timer < gameControl.bestTime[8])
+                        {
+                            gameControl.bestTime[8] = UIControl.timer;
+                        }
+                        gameWin.gameObject.SetActive(true);
+                        Time.timeScale = 0;
+                    }
+                    break;
+                case "Level_Eric2":
+                    if (user.coins == 24)
+                    {
+                        if (UIControl.deaths < gameControl.deaths[9])
+                        {
+                            gameControl.deaths[9] = UIControl.deaths;
+                        }
+                        if (UIControl.timer < gameControl.bestTime[9])
+                        {
+                            gameControl.bestTime[9] = UIControl.timer;
+                        }
                         gameWin.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
@@ -128,7 +188,7 @@ public class Goal : MonoBehaviour {
     /// point is at.
     /// </summary>
     /// <param name="other"></param>
-    void OnTriggerEnter2D(Collider2D other)
+    /*void OnTriggerEnter2D(Collider2D other)
     {
         Scene currentScene = SceneManager.GetActiveScene();
         string currentName = currentScene.name;
@@ -154,7 +214,7 @@ public class Goal : MonoBehaviour {
                 default: break;
             }
         }
-    }
+    }*/
 
 
 
