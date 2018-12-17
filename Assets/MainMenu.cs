@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour {
 	public void PlayGame ()
     {
         int i = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //SceneManager.GetActiveScene().buildIndex + 1
+        SceneManager.LoadScene(1); //SceneManager.GetActiveScene().buildIndex + 1
                                   //"Level_Eric"
     }
 
@@ -16,5 +16,26 @@ public class MainMenu : MonoBehaviour {
     {
         Debug.Log("Quit's Application");
         Application.Quit();
+    }
+
+    public void Level1()
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void Level2()
+    {
+        SceneManager.LoadScene(2);
+    }
+    public void Level3()
+    {
+        SceneManager.LoadScene(3);
+    }
+    public void Level4()
+    {
+        SceneManager.LoadScene(4);
+    }
+    public void Level5()
+    {
+        SceneManager.LoadScene(5);
     }
 }
