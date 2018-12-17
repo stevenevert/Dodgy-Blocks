@@ -1,27 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PauseTest : MonoBehaviour {
 
     private bool isPaused = false;
-    public GameObject PauseMenuUI; 
 
     void Update () {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             isPaused = !isPaused;
             if (isPaused)
-            {
                 Time.timeScale = 1;
-                PauseMenuUI.SetActive(false);
-            }
             else
-            {
                 Time.timeScale = 0;
-                PauseMenuUI.SetActive(true);
-            }
         }
         else if (Input.GetKeyDown(KeyCode.F1)){
 
@@ -43,18 +35,5 @@ public class PauseTest : MonoBehaviour {
                 Time.timeScale = 1;
         }
 
-     
-    }
-    public void Resume()
-    {
-        isPaused = !isPaused;
-        Time.timeScale = 1f;
-
-    }
-
-    public void MoveMainMenu()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
     }
 }
