@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Goal : MonoBehaviour {
 
     // Creating object to activate label in Unity
-    public GameObject gameWin;
+    
     public GameObject WinUI;
     // Creating an object from Player script
     Player user;
@@ -15,7 +15,7 @@ public class Goal : MonoBehaviour {
     /// Initializing the object that is to be touched to win in a level
     /// </summary>
     void Start () {
-        gameWin.gameObject.SetActive(false);
+        
         //Scene currentScene = SceneManager.GetActiveScene();
         //string currentName = currentScene.name;
         user = GameObject.Find("Player").GetComponent<Player>();
@@ -46,7 +46,7 @@ public class Goal : MonoBehaviour {
                         {
                             gameControl.bestTime[1] = UIControl.timer;
                         }
-                        gameWin.gameObject.SetActive(true);
+                        
                         WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
@@ -63,7 +63,7 @@ public class Goal : MonoBehaviour {
                         {
                             gameControl.bestTime[2] = UIControl.timer;
                         }
-                        gameWin.gameObject.SetActive(true);
+                        
                         WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
@@ -79,7 +79,7 @@ public class Goal : MonoBehaviour {
                         {
                             gameControl.bestTime[3] = UIControl.timer;
                         }
-                        gameWin.gameObject.SetActive(true);
+                        
                         WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
@@ -95,7 +95,7 @@ public class Goal : MonoBehaviour {
                         {
                             gameControl.bestTime[4] = UIControl.timer;
                         }
-                        gameWin.gameObject.SetActive(true);
+                        
                         WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
@@ -111,7 +111,7 @@ public class Goal : MonoBehaviour {
                         {
                             gameControl.bestTime[5] = UIControl.timer;
                         }
-                        gameWin.gameObject.SetActive(true);
+                        
                         WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
@@ -127,7 +127,7 @@ public class Goal : MonoBehaviour {
                         {
                             gameControl.bestTime[6] = UIControl.timer;
                         }
-                        gameWin.gameObject.SetActive(true);
+                        
                         WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
@@ -143,7 +143,7 @@ public class Goal : MonoBehaviour {
                         {
                             gameControl.bestTime[7] = UIControl.timer;
                         }
-                        gameWin.gameObject.SetActive(true);
+                        
                         WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
@@ -159,7 +159,7 @@ public class Goal : MonoBehaviour {
                         {
                             gameControl.bestTime[8] = UIControl.timer;
                         }
-                        gameWin.gameObject.SetActive(true);
+                        
                         WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
@@ -175,7 +175,7 @@ public class Goal : MonoBehaviour {
                         {
                             gameControl.bestTime[10] = UIControl.timer;
                         }
-                        gameWin.gameObject.SetActive(true);
+                        
                         WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
@@ -236,7 +236,7 @@ public class Goal : MonoBehaviour {
                     }
                     if (user.coins == 24)
                     {
-                        gameWin.gameObject.SetActive(true);
+                        
                         WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
