@@ -415,6 +415,16 @@ Prefab:
       value: 
       objectReference: {fileID: 24300002, guid: 65ac062a0b54d034ea4e52e082c6afe0,
         type: 2}
+    - target: {fileID: 114041773818971922, guid: 973e1c00e5ebdac48915400de43f8c03,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1725524311}
+    - target: {fileID: 114041773818971922, guid: 973e1c00e5ebdac48915400de43f8c03,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Continue
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 973e1c00e5ebdac48915400de43f8c03, type: 2}
   m_IsPrefabAsset: 0
@@ -2295,11 +2305,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4279186215773866, guid: 893828ebe055d3b4d9f65e00e12a0426, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.57
+      value: 2.71
       objectReference: {fileID: 0}
     - target: {fileID: 4279186215773866, guid: 893828ebe055d3b4d9f65e00e12a0426, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -9.25
+      value: -9.24
       objectReference: {fileID: 0}
     - target: {fileID: 4279186215773866, guid: 893828ebe055d3b4d9f65e00e12a0426, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2344,6 +2354,11 @@ Prefab:
       propertyPath: gameWin
       value: 
       objectReference: {fileID: 1054174274}
+    - target: {fileID: 114253591163255282, guid: 893828ebe055d3b4d9f65e00e12a0426,
+        type: 2}
+      propertyPath: WinUI
+      value: 
+      objectReference: {fileID: 1710368517}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 893828ebe055d3b4d9f65e00e12a0426, type: 2}
   m_IsPrefabAsset: 0
@@ -3407,6 +3422,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1710368517 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1717831252610370, guid: 973e1c00e5ebdac48915400de43f8c03,
+    type: 2}
+  m_PrefabInternal: {fileID: 14740103}
+--- !u!114 &1725524311 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114253591163255282, guid: 893828ebe055d3b4d9f65e00e12a0426,
+    type: 2}
+  m_PrefabInternal: {fileID: 887055748}
+  m_Script: {fileID: 11500000, guid: 0e36a44ef5c9f324dbe826281893a44d, type: 3}
 --- !u!1 &1732869380
 GameObject:
   m_ObjectHideFlags: 0
