@@ -31,7 +31,7 @@ public class Goal : MonoBehaviour {
             switch (currentName)
             {
                 case "Level_Steven":
-                    if (user.coins == 3)
+                    if (user.coins == 0)
                     {
                         if (UIControl.deaths < gameControl.deaths[1])
                         {
@@ -62,7 +62,7 @@ public class Goal : MonoBehaviour {
                     }
                     break;
                 case "Level_Eric1":
-                    if (user.coins == 0)
+                    if (user.coins == 3)
                     {
                         if (UIControl.deaths < gameControl.deaths[3])
                         {
@@ -151,7 +151,7 @@ public class Goal : MonoBehaviour {
                         Time.timeScale = 0;
                     }
                     break;
-                case "Level_Eric2":
+               /* case "Level_Eric2":
                     if (user.coins == 24)
                     {
                         if (UIControl.deaths < gameControl.deaths[9])
@@ -165,7 +165,7 @@ public class Goal : MonoBehaviour {
                         gameWin.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
-                    break;
+                    break;*/
                 default: break;
             }
             /* if (deathControl.deaths < gameControl.Lvl1Deaths)
@@ -188,7 +188,7 @@ public class Goal : MonoBehaviour {
     /// point is at.
     /// </summary>
     /// <param name="other"></param>
-    /*void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         Scene currentScene = SceneManager.GetActiveScene();
         string currentName = currentScene.name;
@@ -197,13 +197,13 @@ public class Goal : MonoBehaviour {
             switch (currentName)
             {
                 case "Level_Eric2":
-                    if (UIControl.deaths < gameControl.Lvl1Deaths)
+                    if (UIControl.deaths < gameControl.deaths[9])
                     {
-                        gameControl.Lvl1Deaths = UIControl.deaths;
+                        gameControl.deaths[9] = UIControl.deaths;
                     }
-                    if (UIControl.timer < gameControl.Lvl1Time)
+                    if (UIControl.timer < gameControl.bestTime[9])
                     {
-                        gameControl.Lvl1Time = UIControl.timer;
+                        gameControl.bestTime[9] = UIControl.timer;
                     }
                     if (user.coins == 24)
                     {
@@ -214,7 +214,7 @@ public class Goal : MonoBehaviour {
                 default: break;
             }
         }
-    }*/
+    }
 
 
 

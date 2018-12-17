@@ -19,13 +19,13 @@ public class gameControl : MonoBehaviour
      public static int Lvl4Deaths = 999;
      public static int Lvl5Deaths = 999;
      public static int totalDeaths = 999;*/
-    public static int[] deaths = new int[9] {9999,9999,9999,9999,9999,9999,9999,9999,9999};
+    public static int[] deaths = new int[10] {9999,9999,9999,9999,9999,9999,9999,9999,9999,9999};
     /*public static float Lvl1Time = 999.99f;
     public static float Lvl2Time = 999.99f;
     public static float Lvl3Time = 999.99f;
     public static float Lvl4Time = 999.99f;
     public static float Lvl5Time = 999.99f;*/
-    public static float[] bestTime = new float[9] { 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f };
+    public static float[] bestTime = new float[10] { 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f,999.99f };
 
 
     void OnEnable()
@@ -97,10 +97,11 @@ public class gameControl : MonoBehaviour
        
         }
 
-    public void Reset(int num)
+    public void Reset()
     {
-       
-    }
+      deaths = new int[10] { 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999,9999 };
+      bestTime = new float[10] { 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f,999.99f };
+}
         
             public void Save()
             {
@@ -155,8 +156,8 @@ public class gameControl : MonoBehaviour
 [Serializable]
 class DeathData
 {
-    public int[] deaths = new int[9];
-    public float[] bestTime = new float[9];
+    public int[] deaths = new int[10];
+    public float[] bestTime = new float[10];
 
     /*public int Lvl1Deaths;
     public int Lvl2Deaths;
