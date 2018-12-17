@@ -7,6 +7,7 @@ public class Goal : MonoBehaviour {
 
     // Creating object to activate label in Unity
     public GameObject gameWin;
+    public GameObject WinUI;
     // Creating an object from Player script
     Player user;
 
@@ -20,7 +21,11 @@ public class Goal : MonoBehaviour {
         user = GameObject.Find("Player").GetComponent<Player>();
     }
 	
-
+    public void Continue()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //SceneManager.GetActiveScene().buildIndex + 1
+        Time.timeScale = 1f;
+    }
     
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -42,6 +47,7 @@ public class Goal : MonoBehaviour {
                             gameControl.bestTime[1] = UIControl.timer;
                         }
                         gameWin.gameObject.SetActive(true);
+                        WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
                     break;
@@ -58,6 +64,7 @@ public class Goal : MonoBehaviour {
                             gameControl.bestTime[2] = UIControl.timer;
                         }
                         gameWin.gameObject.SetActive(true);
+                        WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
                     break;
@@ -73,6 +80,7 @@ public class Goal : MonoBehaviour {
                             gameControl.bestTime[3] = UIControl.timer;
                         }
                         gameWin.gameObject.SetActive(true);
+                        WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
                     break;
@@ -88,6 +96,7 @@ public class Goal : MonoBehaviour {
                             gameControl.bestTime[4] = UIControl.timer;
                         }
                         gameWin.gameObject.SetActive(true);
+                        WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
                     break;
@@ -103,6 +112,7 @@ public class Goal : MonoBehaviour {
                             gameControl.bestTime[5] = UIControl.timer;
                         }
                         gameWin.gameObject.SetActive(true);
+                        WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
                     break;
@@ -118,6 +128,7 @@ public class Goal : MonoBehaviour {
                             gameControl.bestTime[6] = UIControl.timer;
                         }
                         gameWin.gameObject.SetActive(true);
+                        WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
                     break;
@@ -133,6 +144,7 @@ public class Goal : MonoBehaviour {
                             gameControl.bestTime[7] = UIControl.timer;
                         }
                         gameWin.gameObject.SetActive(true);
+                        WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
                     break;
@@ -148,6 +160,7 @@ public class Goal : MonoBehaviour {
                             gameControl.bestTime[8] = UIControl.timer;
                         }
                         gameWin.gameObject.SetActive(true);
+                        WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
                     break;
@@ -163,6 +176,7 @@ public class Goal : MonoBehaviour {
                             gameControl.bestTime[10] = UIControl.timer;
                         }
                         gameWin.gameObject.SetActive(true);
+                        WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
                     break;
@@ -223,6 +237,7 @@ public class Goal : MonoBehaviour {
                     if (user.coins == 24)
                     {
                         gameWin.gameObject.SetActive(true);
+                        WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
                     break;
