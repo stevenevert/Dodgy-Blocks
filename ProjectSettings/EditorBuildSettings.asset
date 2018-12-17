@@ -12,12 +12,27 @@ EditorBuildSettings:
     path: Assets/Scenes/Level_Steven.unity
     guid: f5bdce251d485c644914c937e358eeeb
   - enabled: 1
-    path: Assets/Scenes/Level_Matthew.unity
-    guid: 593adaa613346514ab347368c18ed9d1
-  - enabled: 1
     path: Assets/Scenes/Level_Dominick.unity
     guid: 10531c7f84a3a3f40be056080396a66e
   - enabled: 1
-    path: Assets/Scenes/Level_Eric.unity
+    path: Assets/Scenes/Level_Matthew.unity
+    guid: 593adaa613346514ab347368c18ed9d1
+  - enabled: 1
+    path: Assets/Scenes/Level_Eric1.unity
     guid: 890069391ad1cc3408e817cbe1f31b53
+  - enabled: 1
+    path: Assets/Scenes/Level_Kian1.unity
+    guid: 64351311b6c4e4e478dede25b9416782
+  - enabled: 1
+    path: Assets/Scenes/Level_Kian2.unity
+    guid: 5ee46ec3aeb607746b645953a29bec99
+  - enabled: 1
+    path: Assets/Scenes/Level_Kian3.unity
+    guid: b9f20272a93e8be43904b7be82ccb1e2
+  - enabled: 1
+    path: Assets/Scenes/Level_Eric2.unity
+    guid: 80cec6cfdcf919c4080c427ee93b6474
+  - enabled: 1
+    path: Assets/Scenes/Level_Kian4.unity
+    guid: 7ef25395364143345ab0c1b5c5b5033d
   m_configObjects: {}
