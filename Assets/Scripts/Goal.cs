@@ -30,7 +30,7 @@ public class Goal : MonoBehaviour {
         {
             switch (currentName)
             {
-                case "Level_Steven":
+                case "Level_Steven1":
                     if (user.coins == 0)
                     {
                         if (UIControl.deaths < gameControl.deaths[1])
@@ -151,21 +151,36 @@ public class Goal : MonoBehaviour {
                         Time.timeScale = 0;
                     }
                     break;
-               /* case "Level_Eric2":
-                    if (user.coins == 24)
+                case "Level_Steven2":
+                    if (user.coins == 0)
                     {
-                        if (UIControl.deaths < gameControl.deaths[9])
+                        if (UIControl.deaths < gameControl.deaths[10])
                         {
-                            gameControl.deaths[9] = UIControl.deaths;
+                            gameControl.deaths[10] = UIControl.deaths;
                         }
-                        if (UIControl.timer < gameControl.bestTime[9])
+                        if (UIControl.timer < gameControl.bestTime[10])
                         {
-                            gameControl.bestTime[9] = UIControl.timer;
+                            gameControl.bestTime[10] = UIControl.timer;
                         }
                         gameWin.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
-                    break;*/
+                    break;
+                /* case "Level_Eric2":
+                     if (user.coins == 24)
+                     {
+                         if (UIControl.deaths < gameControl.deaths[9])
+                         {
+                             gameControl.deaths[9] = UIControl.deaths;
+                         }
+                         if (UIControl.timer < gameControl.bestTime[9])
+                         {
+                             gameControl.bestTime[9] = UIControl.timer;
+                         }
+                         gameWin.gameObject.SetActive(true);
+                         Time.timeScale = 0;
+                     }
+                     break;*/
                 default: break;
             }
             /* if (deathControl.deaths < gameControl.Lvl1Deaths)
