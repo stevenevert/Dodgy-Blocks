@@ -56,4 +56,11 @@ public class PauseTest : MonoBehaviour {
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
+
+    public void resetLevel()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+    }
 }

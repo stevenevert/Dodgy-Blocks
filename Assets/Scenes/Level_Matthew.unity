@@ -399,6 +399,16 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: -25.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114577685803914850, guid: 973e1c00e5ebdac48915400de43f8c03,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2001274526}
+    - target: {fileID: 114577685803914850, guid: 973e1c00e5ebdac48915400de43f8c03,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: resetLevel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 973e1c00e5ebdac48915400de43f8c03, type: 2}
   m_IsPrefabAsset: 0
@@ -4307,6 +4317,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2d0bf28b574a64469c831eebda0dafa, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &2001274526 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114824079657141298, guid: 973e1c00e5ebdac48915400de43f8c03,
+    type: 2}
+  m_PrefabInternal: {fileID: 14740103}
+  m_Script: {fileID: 11500000, guid: ed4ff25e2165e364f85c546ade6b4b52, type: 3}
 --- !u!4 &2003048755 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4702460945949842, guid: a2d0bf28b574a64469c831eebda0dafa,

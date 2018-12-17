@@ -674,9 +674,25 @@ Prefab:
       propertyPath: m_AnchoredPosition.x
       value: -609
       objectReference: {fileID: 0}
+    - target: {fileID: 114577685803914850, guid: 973e1c00e5ebdac48915400de43f8c03,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1124682355}
+    - target: {fileID: 114577685803914850, guid: 973e1c00e5ebdac48915400de43f8c03,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: resetLevel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 973e1c00e5ebdac48915400de43f8c03, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1124682355 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114824079657141298, guid: 973e1c00e5ebdac48915400de43f8c03,
+    type: 2}
+  m_PrefabInternal: {fileID: 1124682354}
+  m_Script: {fileID: 11500000, guid: ed4ff25e2165e364f85c546ade6b4b52, type: 3}
 --- !u!1001 &1155023216
 Prefab:
   m_ObjectHideFlags: 0

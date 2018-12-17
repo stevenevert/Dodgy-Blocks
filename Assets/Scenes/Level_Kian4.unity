@@ -130,9 +130,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  health: 0
-  damage: 0
-  score: 0
 --- !u!4 &63440212 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4330678746500402, guid: 973e1c00e5ebdac48915400de43f8c03,
@@ -160,9 +157,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  health: 0
-  damage: 0
-  score: 0
 --- !u!1001 &362194504
 Prefab:
   m_ObjectHideFlags: 0
@@ -308,9 +302,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  health: 0
-  damage: 0
-  score: 0
+--- !u!114 &527899822 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114824079657141298, guid: 973e1c00e5ebdac48915400de43f8c03,
+    type: 2}
+  m_PrefabInternal: {fileID: 1990081790}
+  m_Script: {fileID: 11500000, guid: ed4ff25e2165e364f85c546ade6b4b52, type: 3}
 --- !u!1001 &588796806
 Prefab:
   m_ObjectHideFlags: 0
@@ -481,9 +478,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  health: 0
-  damage: 0
-  score: 0
 --- !u!1 &978887515
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,9 +637,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  health: 0
-  damage: 0
-  score: 0
 --- !u!1 &1159862073 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1617241377784702, guid: a2d0bf28b574a64469c831eebda0dafa,
@@ -663,9 +654,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  health: 0
-  damage: 0
-  score: 0
 --- !u!1001 &1332907071
 Prefab:
   m_ObjectHideFlags: 0
@@ -821,9 +809,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  health: 0
-  damage: 0
-  score: 0
 --- !u!1001 &1473773578
 Prefab:
   m_ObjectHideFlags: 0
@@ -861,7 +846,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4676903129826390, guid: 08b09bdd55e647442b96a2c56d8e8dab, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4676903129826390, guid: 08b09bdd55e647442b96a2c56d8e8dab, type: 2}
       propertyPath: m_LocalScale.x
@@ -896,9 +881,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  health: 0
-  damage: 0
-  score: 0
 --- !u!1001 &1595894346
 Prefab:
   m_ObjectHideFlags: 0
@@ -936,7 +918,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4490732657864494, guid: ac0c41da2c0c4bc45b62e29cf5a2f518, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac0c41da2c0c4bc45b62e29cf5a2f518, type: 2}
@@ -1030,7 +1012,22 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4330678746500402, guid: 973e1c00e5ebdac48915400de43f8c03, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 224955751386767782, guid: 973e1c00e5ebdac48915400de43f8c03,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114577685803914850, guid: 973e1c00e5ebdac48915400de43f8c03,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 527899822}
+    - target: {fileID: 114577685803914850, guid: 973e1c00e5ebdac48915400de43f8c03,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: resetLevel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 973e1c00e5ebdac48915400de43f8c03, type: 2}
