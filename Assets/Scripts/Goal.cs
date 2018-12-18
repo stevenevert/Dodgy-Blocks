@@ -29,6 +29,15 @@ public class Goal : MonoBehaviour {
         Time.timeScale = 1f;
     }
     /// <summary>
+    /// Method moving to the Main Menu after the final level has been beaten 
+    /// </summary>
+    public void MovetoMenu()
+    {
+        SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
+    }
+
+    /// <summary>
     /// When there is collision with the goal
     /// </summary>
     /// <param name="other"></param>

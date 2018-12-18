@@ -45,18 +45,28 @@ public class PauseTest : MonoBehaviour {
         }
 
     }
+    /// <summary>
+    /// Method Resuming game  and unpausing the game state
+    /// Used to give functionality to a button
+    /// </summary>
     public void Resume()
     {
         Time.timeScale = 1;
         PauseMenu.SetActive(false);
     }
-
+    /// <summary>
+    /// Method Moving to main menu and unpausing the game state
+    /// Used to give functionality to a button
+    /// </summary>
     public void MoveMainMenu()
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
-
+    /// <summary>
+    /// Method to reset the scene and unpausing the game state
+    /// Used to give functionality to a button
+    /// </summary>
     public void resetLevel()
     {
         Time.timeScale = 1;
