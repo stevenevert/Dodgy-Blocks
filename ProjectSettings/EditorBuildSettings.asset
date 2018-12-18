@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 025486569bc90ed40bf969ead5011658
   - enabled: 1
-    path: Assets/Scenes/Level_Steven.unity
+    path: Assets/Scenes/Level_Steven1.unity
     guid: f5bdce251d485c644914c937e358eeeb
   - enabled: 1
     path: Assets/Scenes/Level_Dominick.unity
@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_Kian2.unity
     guid: 5ee46ec3aeb607746b645953a29bec99
+  - enabled: 1
+    path: Assets/Scenes/Level_Steven2.unity
+    guid: aa7542f20b0c4e047a4314442923068e
   - enabled: 1
     path: Assets/Scenes/Level_Kian3.unity
     guid: b9f20272a93e8be43904b7be82ccb1e2
