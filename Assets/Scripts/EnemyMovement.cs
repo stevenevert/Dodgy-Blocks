@@ -56,7 +56,7 @@ public class EnemyMovement : MonoBehaviour {
             collision.transform.position = spawnPoint.position;
             deathMan.upDeaths();
           
-            
+            /*
             // Resetting the scene in certain levels depending if the "goal" area is the same as the original spawn point
             switch (currentName)
             {
@@ -65,6 +65,7 @@ public class EnemyMovement : MonoBehaviour {
                     break;
                 default: break;
             }
+            */
         }
  
     }
