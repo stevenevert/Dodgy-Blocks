@@ -46,9 +46,9 @@ public class Goal : MonoBehaviour {
                         {
                             gameControl.bestTime[1] = UIControl.timer;
                         }
-                        
-                        WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;
+                        WinUI.gameObject.SetActive(true);
+                      
                     }
                     break;
 
