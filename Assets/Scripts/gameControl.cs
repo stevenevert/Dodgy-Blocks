@@ -70,6 +70,7 @@ public class gameControl : MonoBehaviour
         {
             Save();
         }
+
         switch (currentName)
         {
             case "Level_Steven1":
@@ -229,6 +230,19 @@ public class gameControl : MonoBehaviour
         data.Lvl3Time = Lvl3Time;
         data.Lvl4Time = Lvl4Time;
         data.Lvl5Time = Lvl5Time;*/
+        for ( int i=1; i<11; i++)
+        {
+            if (!(deaths[i] == 9999))
+            {
+                if (deaths[0] == 9999) deaths[0] = deaths[i];
+                else deaths[0] = deaths[0] + deaths[i];
+            }
+            if(!(bestTime[i]== 999.99f))
+            {
+                if (bestTime[0] == 999.99f) bestTime[0] = bestTime[i];
+                else bestTime[0] = bestTime[0] + bestTime[i];
+            }
+        }
         data.deaths = deaths;
         data.bestTime = bestTime;
 
