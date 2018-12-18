@@ -50,7 +50,8 @@ public class gameControl : MonoBehaviour
     public static float Lvl5Time = 999.99f;*/
     public static float[] bestTime = new float[11] { 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f,999.99f,999.99f };
 
-
+    int j;
+    int t;
     void OnEnable()
     {
         Load();
@@ -174,6 +175,26 @@ public class gameControl : MonoBehaviour
                 else lvl10death.text = deaths[10].ToString();
                 if (bestTime[10] == 999.99f) lvl10time.text = "N/A";
                 else lvl10time.text = bestTime[10].ToString("F");
+                if (deaths[0] == 9999) totalDeath.text = "N/A";
+                else totalDeath.text = deaths[0].ToString();
+                if (bestTime[0] == 999.99f) totalTime.text = "N/A";
+                else totalTime.text = bestTime[0].ToString("F");
+
+
+                for (int i = 1; i < 11; i++)
+                {
+                    if (!(deaths[i] == 9999))
+                    {
+                        if (deaths[0] == 9999) { deaths[0] = deaths[i]; }
+                        else deaths[0] = deaths[0] + deaths[i];
+                    }
+                    if (!(bestTime[i] == 999.99f))
+                    {
+                        if (bestTime[0] == 999.99f) bestTime[0] = bestTime[i];
+                        else bestTime[0] = bestTime[0] + bestTime[i];
+                    }
+                }
+
                 /*lvl2death.text = deaths[2].ToString();
                 lvl2time.text = bestTime[2].ToString("F");
                 lvl3death.text = deaths[3].ToString();
@@ -201,17 +222,57 @@ public class gameControl : MonoBehaviour
                }
 
         // Update is called once per frame
-        void Update()
-        {
-
        
-        }
 
     public void Reset()
     {
       deaths = new int[11] { 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999,9999,9999 };
       bestTime = new float[11] { 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f, 999.99f,999.99f,999.99f };
-}
+        if (deaths[1] == 9999) lvl1death.text = "N/A";
+        else lvl1death.text = deaths[1].ToString();
+        if (bestTime[1] == 999.99f) lvl1time.text = "N/A";
+        else lvl1time.text = bestTime[1].ToString("F");
+        if (deaths[2] == 9999) lvl2death.text = "N/A";
+        else lvl2death.text = deaths[2].ToString();
+        if (bestTime[2] == 999.99f) lvl2time.text = "N/A";
+        else lvl2time.text = bestTime[2].ToString("F");
+        if (deaths[3] == 9999) lvl3death.text = "N/A";
+        else lvl3death.text = deaths[3].ToString();
+        if (bestTime[3] == 999.99f) lvl3time.text = "N/A";
+        else lvl3time.text = bestTime[3].ToString("F");
+        if (deaths[4] == 9999) lvl4death.text = "N/A";
+        else lvl4death.text = deaths[4].ToString();
+        if (bestTime[4] == 999.99f) lvl4time.text = "N/A";
+        else lvl4time.text = bestTime[4].ToString("F");
+        if (deaths[5] == 9999) lvl5death.text = "N/A";
+        else lvl5death.text = deaths[5].ToString();
+        if (bestTime[5] == 999.99f) lvl5time.text = "N/A";
+        else lvl5time.text = bestTime[5].ToString("F");
+        if (deaths[6] == 9999) lvl6death.text = "N/A";
+        else lvl6death.text = deaths[6].ToString();
+        if (bestTime[6] == 999.99f) lvl6time.text = "N/A";
+        else lvl6time.text = bestTime[6].ToString("F");
+        if (deaths[7] == 9999) lvl7death.text = "N/A";
+        else lvl7death.text = deaths[7].ToString();
+        if (bestTime[7] == 999.99f) lvl7time.text = "N/A";
+        else lvl7time.text = bestTime[7].ToString("F");
+        if (deaths[8] == 9999) lvl8death.text = "N/A";
+        else lvl8death.text = deaths[8].ToString();
+        if (bestTime[8] == 999.99f) lvl8time.text = "N/A";
+        else lvl8time.text = bestTime[8].ToString("F");
+        if (deaths[9] == 9999) lvl9death.text = "N/A";
+        else lvl9death.text = deaths[9].ToString();
+        if (bestTime[9] == 999.99f) lvl9time.text = "N/A";
+        else lvl9time.text = bestTime[9].ToString("F");
+        if (deaths[10] == 9999) lvl10death.text = "N/A";
+        else lvl10death.text = deaths[10].ToString();
+        if (bestTime[10] == 999.99f) lvl10time.text = "N/A";
+        else lvl10time.text = bestTime[10].ToString("F");
+        if (deaths[0] == 9999) totalDeath.text = "N/A";
+        else totalDeath.text = deaths[0].ToString();
+        if (bestTime[0] == 999.99f) totalTime.text = "N/A";
+        else totalTime.text = bestTime[0].ToString("F");
+    }
         
             public void Save()
             {
@@ -230,19 +291,18 @@ public class gameControl : MonoBehaviour
         data.Lvl3Time = Lvl3Time;
         data.Lvl4Time = Lvl4Time;
         data.Lvl5Time = Lvl5Time;*/
-        for ( int i=1; i<11; i++)
+        j = 0;
+        t = 0;
+        for(int i = 0; i < 11; i++)
         {
-            if (!(deaths[i] == 9999))
-            {
-                if (deaths[0] == 9999) deaths[0] = deaths[i];
-                else deaths[0] = deaths[0] + deaths[i];
-            }
-            if(!(bestTime[i]== 999.99f))
-            {
-                if (bestTime[0] == 999.99f) bestTime[0] = bestTime[i];
-                else bestTime[0] = bestTime[0] + bestTime[i];
-            }
+            if (deaths[i] == 9999) j++;
         }
+        for (int i = 0; i < 11; i++)
+        {
+            if (bestTime[i] == 999.99f) t++;
+        }
+        bestTime[0] = bestTime[1] + bestTime[2] + bestTime[3] + bestTime[4] + bestTime[5] + bestTime[6] + bestTime[7] + bestTime[8] + bestTime[9] + bestTime[10] - (t * 999.99f);
+        deaths[0] = deaths[1] + deaths[2] + deaths[3] + deaths[4] + deaths[5] + deaths[6] + deaths[7] + deaths[8] + deaths[9] + deaths[10] - (j * 9999);
         data.deaths = deaths;
         data.bestTime = bestTime;
 
