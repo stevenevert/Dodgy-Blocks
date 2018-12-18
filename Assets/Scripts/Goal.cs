@@ -20,21 +20,26 @@ public class Goal : MonoBehaviour {
         //string currentName = currentScene.name;
         user = GameObject.Find("Player").GetComponent<Player>();
     }
-	
+	/// <summary>
+    /// Method to go onto next scene from current scene
+    /// </summary>
     public void Continue()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //SceneManager.GetActiveScene().buildIndex + 1
         Time.timeScale = 1f;
     }
-    
+    /// <summary>
+    /// When there is collision with the goal
+    /// </summary>
+    /// <param name="other"></param>
     void OnCollisionEnter2D(Collision2D other)
     {
         Scene currentScene = SceneManager.GetActiveScene();
         string currentName = currentScene.name;
         if (other.transform.CompareTag("Player"))
-        {
+        {   //Check which level is active
             switch (currentName)
-            {
+            {       //if the levels deaths is less than the deaths on file, replace it. same with time. then activate Win Screen.
                 case "Level_Steven1":
                     if (user.coins == 0)
                     {
@@ -51,7 +56,7 @@ public class Goal : MonoBehaviour {
                       
                     }
                     break;
-
+                //if the levels deaths is less than the deaths on file, replace it. same with time. then activate Win Screen.
                 case "Level_Dominick":
                     if (user.coins == 0)
                     {
@@ -68,6 +73,7 @@ public class Goal : MonoBehaviour {
                         Time.timeScale = 0;
                     }
                     break;
+                //if the levels deaths is less than the deaths on file, replace it. same with time. then activate Win Screen.
                 case "Level_Eric1":
                     if (user.coins == 3)
                     {
@@ -84,6 +90,7 @@ public class Goal : MonoBehaviour {
                         Time.timeScale = 0;
                     }
                     break;
+                //if the levels deaths is less than the deaths on file, replace it. same with time. then activate Win Screen.
                 case "Level_Kian1":
                     if (user.coins == 0)
                     {
@@ -100,6 +107,7 @@ public class Goal : MonoBehaviour {
                         Time.timeScale = 0;
                     }
                     break;
+                //if the levels deaths is less than the deaths on file, replace it. same with time. then activate Win Screen.
                 case "Level_Matthew":
                     if (user.coins == 0)
                     {
@@ -116,6 +124,7 @@ public class Goal : MonoBehaviour {
                         Time.timeScale = 0;
                     }
                     break;
+                //if the levels deaths is less than the deaths on file, replace it. same with time. then activate Win Screen.
                 case "Level_Kian2":
                     if (user.coins == 0)
                     {
@@ -132,6 +141,7 @@ public class Goal : MonoBehaviour {
                         Time.timeScale = 0;
                     }
                     break;
+                //if the levels deaths is less than the deaths on file, replace it. same with time. then activate Win Screen.
                 case "Level_Kian3":
                     if (user.coins == 0)
                     {
@@ -148,6 +158,7 @@ public class Goal : MonoBehaviour {
                         Time.timeScale = 0;
                     }
                     break;
+                //if the levels deaths is less than the deaths on file, replace it. same with time. then activate Win Screen.
                 case "Level_Kian4":
                     if (user.coins == 0)
                     {
@@ -164,6 +175,7 @@ public class Goal : MonoBehaviour {
                         Time.timeScale = 0;
                     }
                     break;
+                //if the levels deaths is less than the deaths on file, replace it. same with time. then activate Win Screen.
                 case "Level_Steven2":
                     if (user.coins == 0)
                     {
@@ -180,31 +192,8 @@ public class Goal : MonoBehaviour {
                         Time.timeScale = 0;
                     }
                     break;
-                /* case "Level_Eric2":
-                     if (user.coins == 24)
-                     {
-                         if (UIControl.deaths < gameControl.deaths[9])
-                         {
-                             gameControl.deaths[9] = UIControl.deaths;
-                         }
-                         if (UIControl.timer < gameControl.bestTime[9])
-                         {
-                             gameControl.bestTime[9] = UIControl.timer;
-                         }
-                         gameWin.gameObject.SetActive(true);
-                         Time.timeScale = 0;
-                     }
-                     break;*/
                 default: break;
             }
-            /* if (deathControl.deaths < gameControl.Lvl1Deaths)
-             {
-                 gameControl.Lvl1Deaths = deathControl.deaths;
-             }
-            if (Countdown.timer < gameControl.Lvl1Time)
-            {
-                 gameControl.Lvl1Time = Countdown.timer;
-            }*/
 
          
 
@@ -236,6 +225,7 @@ public class Goal : MonoBehaviour {
                     }
                     if (user.coins == 24)
                     {
+
                         
                         WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;

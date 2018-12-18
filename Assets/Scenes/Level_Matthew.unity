@@ -450,6 +450,10 @@ Prefab:
       propertyPath: m_FontData.m_FontSize
       value: 65
       objectReference: {fileID: 0}
+    - target: {fileID: 1224806648025398, guid: 973e1c00e5ebdac48915400de43f8c03, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 973e1c00e5ebdac48915400de43f8c03, type: 2}
   m_IsPrefabAsset: 0
@@ -2330,11 +2334,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4279186215773866, guid: 893828ebe055d3b4d9f65e00e12a0426, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.35
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 4279186215773866, guid: 893828ebe055d3b4d9f65e00e12a0426, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -10.55
+      value: -9.23
       objectReference: {fileID: 0}
     - target: {fileID: 4279186215773866, guid: 893828ebe055d3b4d9f65e00e12a0426, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2378,7 +2382,7 @@ Prefab:
         type: 2}
       propertyPath: gameWin
       value: 
-      objectReference: {fileID: 1054174274}
+      objectReference: {fileID: 0}
     - target: {fileID: 114253591163255282, guid: 893828ebe055d3b4d9f65e00e12a0426,
         type: 2}
       propertyPath: WinUI
@@ -2743,11 +2747,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4702460945949842, guid: a2d0bf28b574a64469c831eebda0dafa,
     type: 2}
   m_PrefabInternal: {fileID: 967265405}
---- !u!1 &1054174274 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1242077555979632, guid: 973e1c00e5ebdac48915400de43f8c03,
-    type: 2}
-  m_PrefabInternal: {fileID: 14740103}
 --- !u!4 &1060300580 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4702460945949842, guid: a2d0bf28b574a64469c831eebda0dafa,
@@ -3968,6 +3967,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiText: {fileID: 0}
   TimeText: {fileID: 0}
+  lvl1death: {fileID: 0}
+  lvl1time: {fileID: 0}
+  lvl2death: {fileID: 0}
+  lvl2time: {fileID: 0}
+  lvl3death: {fileID: 0}
+  lvl3time: {fileID: 0}
+  lvl4death: {fileID: 0}
+  lvl4time: {fileID: 0}
+  lvl5death: {fileID: 0}
+  lvl5time: {fileID: 0}
+  lvl6death: {fileID: 0}
+  lvl6time: {fileID: 0}
+  lvl7death: {fileID: 0}
+  lvl7time: {fileID: 0}
+  lvl8death: {fileID: 0}
+  lvl8time: {fileID: 0}
+  lvl9death: {fileID: 0}
+  lvl9time: {fileID: 0}
+  lvl10death: {fileID: 0}
+  lvl10time: {fileID: 0}
+  totalDeath: {fileID: 0}
+  totalTime: {fileID: 0}
   heart1: {fileID: 0}
   heart2: {fileID: 0}
   heart3: {fileID: 0}

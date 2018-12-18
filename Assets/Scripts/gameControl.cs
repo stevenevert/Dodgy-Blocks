@@ -8,7 +8,7 @@ using System.IO;
 using UnityEngine.UI;
 
 public class gameControl : MonoBehaviour
-    {
+    { //initialize all variables needed throughout game.
         [SerializeField] private Text uiText;
     [SerializeField] private Text TimeText;
     [SerializeField] private Text lvl1death;
@@ -52,28 +52,37 @@ public class gameControl : MonoBehaviour
 
     int j;
     int t;
+    /// <summary>
+    /// when the game begins a scene, load the data from a file
+    /// </summary>
     void OnEnable()
     {
         Load();
     }
-
+    /// <summary>
+    /// when the game exits a scene, save the data to the file
+    /// </summary>
     void OnDisable()
     {
         Save();
     }
 
     // Use this for initialization
+    /// <summary>
+    /// when the scene starts
+    /// </summary>
     void Start()
         {
         Scene currentScene = SceneManager.GetActiveScene();
         string currentName = currentScene.name;
+        //If the save file does not exist, create it.
         if(!File.Exists(Application.persistentDataPath + "/deaths.dat"))
         {
             Save();
         }
-
+        //Switch statement to check which level is active
         switch (currentName)
-        {
+        {//Display the correct score depending on which level is active.
             case "Level_Steven1":
                 if (deaths[1] == 9999) uiText.text = "N/A";
                 else uiText.text = deaths[1].ToString();
@@ -134,7 +143,7 @@ public class gameControl : MonoBehaviour
                 if (bestTime[7] == 999.99f) TimeText.text = "N/A";
                 else TimeText.text = bestTime[7].ToString("F");
                 break;
-            case "Menu":
+            case "Menu": //Lots of text boxes on main menu means lots of if else statements
                 if (deaths[1] == 9999) lvl1death.text = "N/A";
                 else lvl1death.text = deaths[1].ToString();
                 if (bestTime[1] == 999.99f) lvl1time.text = "N/A";
@@ -179,51 +188,17 @@ public class gameControl : MonoBehaviour
                 else totalDeath.text = deaths[0].ToString();
                 if (bestTime[0] == 999.99f) totalTime.text = "N/A";
                 else totalTime.text = bestTime[0].ToString("F");
-
-
-                for (int i = 1; i < 11; i++)
-                {
-                    if (!(deaths[i] == 9999))
-                    {
-                        if (deaths[0] == 9999) { deaths[0] = deaths[i]; }
-                        else deaths[0] = deaths[0] + deaths[i];
-                    }
-                    if (!(bestTime[i] == 999.99f))
-                    {
-                        if (bestTime[0] == 999.99f) bestTime[0] = bestTime[i];
-                        else bestTime[0] = bestTime[0] + bestTime[i];
-                    }
-                }
-
-                /*lvl2death.text = deaths[2].ToString();
-                lvl2time.text = bestTime[2].ToString("F");
-                lvl3death.text = deaths[3].ToString();
-                lvl3time.text = bestTime[3].ToString("F");
-                lvl4death.text = deaths[4].ToString();
-                lvl4time.text = bestTime[4].ToString("F");
-                lvl5death.text = deaths[5].ToString();
-                lvl5time.text = bestTime[5].ToString("F");
-                lvl6death.text = deaths[6].ToString();
-                lvl6time.text = bestTime[6].ToString("F");
-                lvl7death.text = deaths[7].ToString();
-                lvl7time.text = bestTime[7].ToString("F");
-                lvl8death.text = deaths[8].ToString();
-                lvl8time.text = bestTime[8].ToString("F");
-                lvl9death.text = deaths[9].ToString();
-                lvl9time.text = bestTime[9].ToString("F");
-                lvl10death.text = deaths[10].ToString();
-                lvl10time.text = bestTime[10].ToString("F");
-                totalDeath.text = deaths[0].ToString();
-                totalTime.text = bestTime[0].ToString("F");*/
                 break;
 
             default: break;
         }
                }
 
-        // Update is called once per frame
        
-
+       
+    /// <summary>
+    /// Method to reset all values in the file and change displays 
+    /// </summary>
     public void Reset()
     {
       deaths = new int[11] { 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999,9999,9999 };
@@ -272,25 +247,18 @@ public class gameControl : MonoBehaviour
         else totalDeath.text = deaths[0].ToString();
         if (bestTime[0] == 999.99f) totalTime.text = "N/A";
         else totalTime.text = bestTime[0].ToString("F");
+        Save();
     }
-        
-            public void Save()
+        /// <summary>
+        /// Method to save the data to a file
+        /// </summary>
+    public void Save()
             {
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/deaths.dat");
 
         DeathData data = new DeathData();
-        /*data.Lvl1Deaths = Lvl1Deaths;
-        data.Lvl2Deaths = Lvl2Deaths;
-        data.Lvl3Deaths = Lvl3Deaths;
-        data.Lvl4Deaths = Lvl4Deaths;
-        data.Lvl5Deaths = Lvl5Deaths;
-        data.totalDeaths = totalDeaths;
-        data.Lvl1Time = Lvl1Time;
-        data.Lvl2Time = Lvl2Time;
-        data.Lvl3Time = Lvl3Time;
-        data.Lvl4Time = Lvl4Time;
-        data.Lvl5Time = Lvl5Time;*/
+      
         j = 0;
         t = 0;
         for(int i = 0; i < 11; i++)
@@ -301,6 +269,7 @@ public class gameControl : MonoBehaviour
         {
             if (bestTime[i] == 999.99f) t++;
         }
+        //Calculate the total deaths and time before saving
         bestTime[0] = bestTime[1] + bestTime[2] + bestTime[3] + bestTime[4] + bestTime[5] + bestTime[6] + bestTime[7] + bestTime[8] + bestTime[9] + bestTime[10] - (t * 999.99f);
         deaths[0] = deaths[1] + deaths[2] + deaths[3] + deaths[4] + deaths[5] + deaths[6] + deaths[7] + deaths[8] + deaths[9] + deaths[10] - (j * 9999);
         data.deaths = deaths;
@@ -308,50 +277,31 @@ public class gameControl : MonoBehaviour
 
         bf.Serialize(file, data);
         file.Close();
-            }
-
-            public void Load()
-            {
-                if(File.Exists(Application.persistentDataPath + "/deaths.dat"))
+    }
+    /// <summary>
+    /// Method to load data from the file into variables.
+    /// </summary>    
+    public void Load()
+    {
+        if (File.Exists(Application.persistentDataPath + "/deaths.dat"))
         {
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(Application.persistentDataPath + "/deaths.dat", FileMode.Open);
             DeathData data = (DeathData)bf.Deserialize(file);
             deaths = data.deaths;
             bestTime = data.bestTime;
-            /*Lvl1Deaths = data.Lvl1Deaths;
-            Lvl2Deaths = data.Lvl2Deaths;
-            Lvl3Deaths = data.Lvl3Deaths;
-            Lvl4Deaths = data.Lvl4Deaths;
-            Lvl5Deaths = data.Lvl5Deaths;
-            totalDeaths = data.totalDeaths;
-            Lvl1Time = data.Lvl1Time;
-            Lvl2Time = data.Lvl2Time;
-            Lvl3Time = data.Lvl3Time;
-            Lvl4Time = data.Lvl4Time;
-            Lvl5Time = data.Lvl5Time;*/
 
         }
-            }
-
     }
 
+    }
+/// <summary>
+/// local class to be saved into file, must be serializable.
+/// </summary>
 [Serializable]
 class DeathData
 {
     public int[] deaths = new int[11];
     public float[] bestTime = new float[11];
-
-    /*public int Lvl1Deaths;
-    public int Lvl2Deaths;
-    public int Lvl3Deaths;
-    public int Lvl4Deaths;
-    public int Lvl5Deaths;
-    public int totalDeaths;
-    public float Lvl1Time;
-    public float Lvl2Time;
-    public float Lvl3Time;
-    public float Lvl4Time;
-    public float Lvl5Time;*/
 
 }
