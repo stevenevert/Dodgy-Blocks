@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EnemyMovement : MonoBehaviour {
 
-    
+    // Creating vars that will hold values through the access Unity library methods
     public float left;
     public float right;
     public float up;
@@ -56,6 +56,7 @@ public class EnemyMovement : MonoBehaviour {
             collision.transform.position = spawnPoint.position;
             deathMan.upDeaths();
           
+            // Commented out considering that we considered we shouldn't restart scenes throughout gameplay since it resets everything
             /*
             // Resetting the scene in certain levels depending if the "goal" area is the same as the original spawn point
             switch (currentName)

@@ -10,16 +10,15 @@ public class Player : MonoBehaviour
     private Vector2 moveVelocity;
 
     /// <summary>
-    /// 
+    /// Obtaining the type of the component properties that are set within Unity
     /// </summary>
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-       
     }
 
     /// <summary>
-    /// Updating the movement of the player
+    /// Updating the speed of the player and freezing its rotation
     /// </summary>
     void Update()
     {
@@ -28,11 +27,14 @@ public class Player : MonoBehaviour
         rb.freezeRotation = true;
     }
 
+
+    /// <summary>
+    /// Moving the player through the scene in Unity on behalf of the speed that is preset and the current position of the player
+    /// </summary>
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
     }
-
 
     /// <summary>
     /// Adding a method which will check for collision with coin to destroy it and add to the counter

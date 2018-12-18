@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class deathControl : MonoBehaviour {
+
+    /// <summary>
+    /// Creating objects and vars to be able to hold the death count value and to access the UI through Unity
+    /// </summary>
     [SerializeField] private Text uiText;
     [SerializeField] private int mainDeaths;
 
@@ -22,7 +26,7 @@ public class deathControl : MonoBehaviour {
     }
 
     /// <summary>
-    /// Adding the amount of deaths
+    /// Adding the amount of deaths and displaying such
     /// </summary>
     public void upDeaths()
     {

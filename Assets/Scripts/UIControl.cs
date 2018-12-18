@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class UIControl : MonoBehaviour {
+
+    /// <summary>
+    /// Creating objects and vars to be able to hold the timer and death values to access the UI through Unity
+    /// </summary>
     [SerializeField] private Text uiTextDeath;
     [SerializeField] private int mainDeaths;
     [SerializeField] private Text uiTextTime;
@@ -18,17 +22,18 @@ public class UIControl : MonoBehaviour {
     public Text deathText;
 
     /// <summary>
-    /// 
+    /// Initializing the timer and the death count
+    /// Allowing the starting variable to be accessed through Unity
     /// </summary>
     void Start () {
         deaths = mainDeaths;
         timer = mainTimer;
     }
-	
-	/// <summary>
-    /// 
+
+    /// <summary>
+    /// Defining the timer so that it starts counting up with a floating type value
     /// </summary>
-	void Update () {
+    void Update () {
         
         if (timer >= 0.0f && canCount)
         {
@@ -46,7 +51,7 @@ public class UIControl : MonoBehaviour {
         }
     }
     /// <summary>
-    /// 
+    /// Adding the amount of deaths and displaying such
     /// </summary>
     public void upDeaths()
     {

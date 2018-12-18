@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class Countdown : MonoBehaviour {
 
+    /// <summary>
+    /// Creating objects and vars to be able to hold the timer value and to access the UI through Unity
+    /// </summary>
     [SerializeField] private Text uiText;
     [SerializeField] private float mainTimer;
     public GameObject gameOver;

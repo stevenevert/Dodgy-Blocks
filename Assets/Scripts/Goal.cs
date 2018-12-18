@@ -20,6 +20,7 @@ public class Goal : MonoBehaviour {
         //string currentName = currentScene.name;
         user = GameObject.Find("Player").GetComponent<Player>();
     }
+
 	/// <summary>
     /// Method to go onto next scene from current scene
     /// </summary>
@@ -39,6 +40,7 @@ public class Goal : MonoBehaviour {
 
     /// <summary>
     /// When there is collision with the goal
+    /// It also checks the amount of coins on each level, depending if the level contains any coins at all
     /// </summary>
     /// <param name="other"></param>
     void OnCollisionEnter2D(Collision2D other)
@@ -212,7 +214,7 @@ public class Goal : MonoBehaviour {
 
     /// <summary>
     /// Method supporting levels in which the goal is at the same location where the spawn
-    /// point is at.
+    /// point is at
     /// </summary>
     /// <param name="other"></param>
     void OnTriggerEnter2D(Collider2D other)
@@ -233,9 +235,7 @@ public class Goal : MonoBehaviour {
                         gameControl.bestTime[9] = UIControl.timer;
                     }
                     if (user.coins == 24)
-                    {
-
-                        
+                    {   
                         WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
