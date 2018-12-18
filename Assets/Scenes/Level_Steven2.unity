@@ -113,6 +113,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &12941455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1717831252610370, guid: 973e1c00e5ebdac48915400de43f8c03,
+    type: 2}
+  m_PrefabInternal: {fileID: 323707306}
 --- !u!4 &17678438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4659375112100364, guid: 359e38057051f4d49b293633d1a36299,
@@ -420,6 +425,11 @@ Prefab:
       propertyPath: gameWin
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114253591163255282, guid: 893828ebe055d3b4d9f65e00e12a0426,
+        type: 2}
+      propertyPath: WinUI
+      value: 
+      objectReference: {fileID: 12941455}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 893828ebe055d3b4d9f65e00e12a0426, type: 2}
   m_IsPrefabAsset: 0
