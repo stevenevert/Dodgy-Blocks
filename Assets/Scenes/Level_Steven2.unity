@@ -462,31 +462,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114577685803914850, guid: 973e1c00e5ebdac48915400de43f8c03,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 538905405}
-    - target: {fileID: 114577685803914850, guid: 973e1c00e5ebdac48915400de43f8c03,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: resetLevel
-      objectReference: {fileID: 0}
-    - target: {fileID: 212328333507288728, guid: 973e1c00e5ebdac48915400de43f8c03,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 0.7607844
-      objectReference: {fileID: 0}
-    - target: {fileID: 212328333507288728, guid: 973e1c00e5ebdac48915400de43f8c03,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 0.7607844
-      objectReference: {fileID: 0}
-    - target: {fileID: 212328333507288728, guid: 973e1c00e5ebdac48915400de43f8c03,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 0.7607844
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 973e1c00e5ebdac48915400de43f8c03, type: 2}
   m_IsPrefabAsset: 0
@@ -621,12 +596,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4659375112100364, guid: 359e38057051f4d49b293633d1a36299,
     type: 2}
   m_PrefabInternal: {fileID: 1983136534}
---- !u!114 &538905405 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114824079657141298, guid: 973e1c00e5ebdac48915400de43f8c03,
-    type: 2}
-  m_PrefabInternal: {fileID: 323707306}
-  m_Script: {fileID: 11500000, guid: ed4ff25e2165e364f85c546ade6b4b52, type: 3}
 --- !u!1001 &566593824
 Prefab:
   m_ObjectHideFlags: 0
