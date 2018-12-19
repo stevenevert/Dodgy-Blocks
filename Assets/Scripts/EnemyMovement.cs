@@ -28,7 +28,9 @@ public class EnemyMovement : MonoBehaviour {
     {
         deathMan = GameObject.FindObjectOfType<UIControl>();
     }
-    
+    /// <summary>
+    /// At the start of the game, check the x and y variables to set the boolean for the axes controllers
+    /// </summary>
     void Start () {
         originalPosition = this.transform.position;
         if (up == 0 && down == 0)
@@ -71,7 +73,12 @@ public class EnemyMovement : MonoBehaviour {
  
     }
 
-
+    /// <summary>
+    /// This method constantly checks if the x and y controllers are on.
+    /// There is a variable called x/y comeback that indicates they have gone halfway.
+    /// Once they have gone halfway they will turn back and the boolean reverts to its original value
+    /// This allows the enemy to patrol a certain amount of units depending on the inputted values in the inspector
+    /// </summary>
     void Update() {
         if (xController)
         {
