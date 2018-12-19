@@ -156,23 +156,6 @@ public class Goal : MonoBehaviour {
                 case "Level_Kian3":
                     if (user.coins == 0)
                     {
-                        if (UIControl.deaths < gameControl.deaths[7])
-                        {
-                            gameControl.deaths[7] = UIControl.deaths;
-                        }
-                        if (UIControl.timer < gameControl.bestTime[7])
-                        {
-                            gameControl.bestTime[7] = UIControl.timer;
-                        }
-                        
-                        WinUI.gameObject.SetActive(true);
-                        Time.timeScale = 0;
-                    }
-                    break;
-                //if the levels deaths is less than the deaths on file, replace it. same with time. then activate Win Screen.
-                case "Level_Kian4":
-                    if (user.coins == 0)
-                    {
                         if (UIControl.deaths < gameControl.deaths[8])
                         {
                             gameControl.deaths[8] = UIControl.deaths;
@@ -187,16 +170,33 @@ public class Goal : MonoBehaviour {
                     }
                     break;
                 //if the levels deaths is less than the deaths on file, replace it. same with time. then activate Win Screen.
+                case "Level_Kian4":
+                    if (user.coins == 0)
+                    {
+                        if (UIControl.deaths < gameControl.deaths[9])
+                        {
+                            gameControl.deaths[9] = UIControl.deaths;
+                        }
+                        if (UIControl.timer < gameControl.bestTime[9])
+                        {
+                            gameControl.bestTime[9] = UIControl.timer;
+                        }
+                        
+                        WinUI.gameObject.SetActive(true);
+                        Time.timeScale = 0;
+                    }
+                    break;
+                //if the levels deaths is less than the deaths on file, replace it. same with time. then activate Win Screen.
                 case "Level_Steven2":
                     if (user.coins == 0)
                     {
-                        if (UIControl.deaths < gameControl.deaths[10])
+                        if (UIControl.deaths < gameControl.deaths[7])
                         {
-                            gameControl.deaths[10] = UIControl.deaths;
+                            gameControl.deaths[7] = UIControl.deaths;
                         }
-                        if (UIControl.timer < gameControl.bestTime[10])
+                        if (UIControl.timer < gameControl.bestTime[7])
                         {
-                            gameControl.bestTime[10] = UIControl.timer;
+                            gameControl.bestTime[7] = UIControl.timer;
                         }
                         
                         WinUI.gameObject.SetActive(true);
@@ -226,16 +226,17 @@ public class Goal : MonoBehaviour {
             switch (currentName)
             {
                 case "Level_Eric2":
-                    if (UIControl.deaths < gameControl.deaths[9])
-                    {
-                        gameControl.deaths[9] = UIControl.deaths;
-                    }
-                    if (UIControl.timer < gameControl.bestTime[9])
-                    {
-                        gameControl.bestTime[9] = UIControl.timer;
-                    }
+                    
                     if (user.coins == 24)
-                    {   
+                    {
+                        if (UIControl.deaths < gameControl.deaths[10])
+                        {
+                            gameControl.deaths[10] = UIControl.deaths;
+                        }
+                        if (UIControl.timer < gameControl.bestTime[10])
+                        {
+                            gameControl.bestTime[10] = UIControl.timer;
+                        }
                         WinUI.gameObject.SetActive(true);
                         Time.timeScale = 0;
                     }
