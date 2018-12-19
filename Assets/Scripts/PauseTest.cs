@@ -8,6 +8,11 @@ public class PauseTest : MonoBehaviour {
     private bool isPaused = false;
     public GameObject PauseMenu;
 
+    /// <summary>
+    /// Enables the use of the Escape key to pause the game and bring up the pause menu.
+    /// F keys are set to slow down the timescale of the game or speed it up
+    /// F3 is used to reset the timescale back to 1, its original timescale.
+    /// </summary>
     void Update () {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
